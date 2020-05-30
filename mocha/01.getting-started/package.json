@@ -1,0 +1,15 @@
+{
+  "name": "01.getting-started",
+  "version": "1.0.0",
+  "description": "Getting started demo",
+  "main": "add.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "helinjiang",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.2.0"
+  }
+}
