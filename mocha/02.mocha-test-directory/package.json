@@ -1,15 +1,13 @@
 {
-  "name": "02.mocha-usages",
-  "version": "1.0.0",
-  "description": "some mocha command usage",
-  "main": "index.js",
+  "name": "02.mocha-test-directory",
+  "private": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha --recursive",
+    "test-other-folder": "./node_modules/mocha/bin/mocha test-other-folder --recursive",
+    "test-all": "npm run test && npm run test-other-folder"
   },
-  "author": "helinjiang",
-  "license": "MIT",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "chai": "^4.2.0",
+    "mocha": "^7.2.0"
   }
 }
