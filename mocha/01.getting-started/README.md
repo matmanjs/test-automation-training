@@ -57,7 +57,7 @@ $ ./node_modules/mocha/bin/mocha add.test.js
 
 ## 3. 如何简化执行测试的命令
 
-上述执行测试的命令比较长，一般有两种方式可以简化。
+上述执行测试的命令比较长，一般有三种方式可以简化。
 
 ### 3.1 在 package.json 中定义 script 命令
 
