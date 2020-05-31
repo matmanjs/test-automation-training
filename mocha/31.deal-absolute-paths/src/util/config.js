@@ -1,4 +1,4 @@
 module.exports = {
-    name: 'pro-mocha',
+    name: 'test-automation-training-mocha',
     author: 'helinjiang'
 };
