@@ -1,0 +1,13 @@
+{
+  "name": "31.deal-absolute-paths",
+  "private": true,
+  "scripts": {
+    "test": "npx mocha"
+  },
+  "devDependencies": {
+    "app-module-path": "^2.2.0",
+    "chai": "^4.2.0",
+    "mocha": "^7.2.0",
+    "mochawesome": "^6.1.1"
+  }
+}
