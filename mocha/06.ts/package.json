@@ -1,0 +1,17 @@
+{
+  "name": "06.ts",
+  "private": true,
+  "scripts": {
+    "test": "npx ts-mocha -p tsconfig.json test/**/*.test.ts --recursive"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/expect": "^24.3.0",
+    "@types/mocha": "^7.0.2",
+    "chai": "^4.2.0",
+    "cross-env": "^7.0.2",
+    "mocha": "^7.2.0",
+    "ts-mocha": "^7.0.0",
+    "typescript": "^3.9.3"
+  }
+}

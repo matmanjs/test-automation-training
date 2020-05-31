@@ -12,7 +12,7 @@ $ npm install
 
 ## 2. 示例说明
 
-本来演示了 es6 项目的处理方式。我们需要安装 [@babel/register](https://www.npmjs.com/package/@babel/register) 和 [@babel/preset-env](https://www.npmjs.com/package/@babel/preset-env)  。
+本示例演示了 es6 项目的处理方式。我们需要安装 [@babel/register](https://www.npmjs.com/package/@babel/register) 和 [@babel/preset-env](https://www.npmjs.com/package/@babel/preset-env)  。
 
 增加 `.babelrc` 文件，并且配置：
 
