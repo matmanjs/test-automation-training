@@ -2,8 +2,8 @@
   "name": "05.es6",
   "private": true,
   "scripts": {
-    "test": "npx mocha",
-    "test-custom-babel-env": "npx cross-env BABEL_ENV=test mocha"
+    "test": "npx mocha --require @babel/register --recursive",
+    "test-custom-babel-env": "npx cross-env BABEL_ENV=test mocha --require @babel/register --recursive"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.10.2",
