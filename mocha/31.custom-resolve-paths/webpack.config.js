@@ -10,7 +10,7 @@ module.exports = {
     // https://webpack.js.org/configuration/resolve/
     resolve: {
         alias: {
-            util: path.resolve(__dirname, 'src/util')
+            utils: path.resolve(__dirname, 'src/utils')
         }
     }
 };

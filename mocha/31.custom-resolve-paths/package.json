@@ -1,5 +1,5 @@
 {
-  "name": "31.deal-absolute-paths",
+  "name": "31.custom-resolve-paths",
   "private": true,
   "scripts": {
     "build": "npx webpack",
