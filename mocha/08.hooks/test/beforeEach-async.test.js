@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 
-describe("beforeEach示例-异步操作", function () {
+describe('beforeEach示例-异步操作', function () {
     var foo = false;
 
     beforeEach(function (done) {
@@ -10,7 +10,7 @@ describe("beforeEach示例-异步操作", function () {
         }, 50);
     });
 
-    it("全局变量异步修改应该成功", function () {
+    it('全局变量异步修改应该成功', function () {
         expect(foo).to.be.equal(true);
     });
 });

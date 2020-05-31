@@ -1,0 +1,11 @@
+{
+  "name": "07.hooks",
+  "private": true,
+  "scripts": {
+    "test": "npx mocha"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.2.0"
+  }
+}
