@@ -1,9 +1,5 @@
-const util = require('./util');
-const config = require('./util/config');
+const myTest = require('./tools');
 
-function myTest() {
-    return config.name + '=' + util.add(1, 2);
-}
+console.log(myTest(1, 2));
 
-module.exports = myTest;
-
+document.querySelector('#msg').innerHTML = myTest(1, 2);
