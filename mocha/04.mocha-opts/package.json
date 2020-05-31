@@ -1,15 +1,16 @@
 {
-  "name": "02.mocha-usages",
-  "version": "1.0.0",
-  "description": "some mocha command usage",
-  "main": "index.js",
+  "name": "04.mocha-opts",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test2": "npx mocha",
+    "test-use-mocha-opts": "npx mocha test-use-mocha-opts",
+    "test": "npx mocha --recursive --reporter mochawesome --reporter-options reportDir=.test_output",
+    "coverage": "npx nyc npm test"
   },
-  "author": "helinjiang",
-  "license": "MIT",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "chai": "^4.2.0",
+    "mocha": "^7.2.0",
+    "mochawesome": "^6.1.1",
+    "nyc": "^15.0.1"
   }
 }
