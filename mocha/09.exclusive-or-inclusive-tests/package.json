@@ -1,0 +1,11 @@
+{
+  "name": "09.exclusive-or-inclusive-tests",
+  "private": true,
+  "scripts": {
+    "test": "npx mocha"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.2.0"
+  }
+}

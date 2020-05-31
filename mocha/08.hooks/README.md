@@ -1,6 +1,6 @@
-# 02.mocha-test-directory
+# 08.hooks
 
-Mocha 提供了 `before()`, `after()`, `beforeEach()` 和 `afterEach()` 4 中勾子函数用于为自动化测试做初始化或者清理等工作。
+Mocha 提供了 `before()`, `after()`, `beforeEach()` 和 `afterEach()` 共 `4` 种勾子函数用于为自动化测试做初始化或者清理等工作。
 
 - [HOOKS](https://mochajs.org/#hooks)
 
@@ -35,3 +35,7 @@ $ npm install
 ## 2. 示例说明
 
 根据情况来选择合适的 `hooks` 即可。
+
+```bash
+$ npm test
+```
