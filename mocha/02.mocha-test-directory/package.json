@@ -2,8 +2,8 @@
   "name": "02.mocha-test-directory",
   "private": false,
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --recursive",
-    "test-other-folder": "./node_modules/mocha/bin/mocha test-other-folder --recursive",
+    "test": "npx mocha --recursive",
+    "test-other-folder": "npx mocha test-other-folder --recursive",
     "test-all": "npm run test && npm run test-other-folder"
   },
   "devDependencies": {
