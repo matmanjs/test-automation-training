@@ -1,0 +1,4 @@
+reporter: 'mochawesome'
+reporterOptions:
+  - 'reportDir=.test_output'
+recursive: true
