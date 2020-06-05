@@ -7,7 +7,7 @@
 - 使用 [babel](https://babeljs.io/) 处理 ES6 语法
 - 使用 [nyc](https://www.npmjs.com/package/nyc) 统计代码覆盖率，并将结果输出到 `test_output/coverage` 目录下
 - 使用 [mochawesome](https://www.npmjs.com/package/mochawesome) 做测试报告，并将结果输出到 `test_output/mochawesome` 目录下
-- 使用 eslint ，参考了 [vue](https://github.com/vuejs/vue) 的配置
+- 使用 [eslint](https://eslint.org/) ，参考了 [vue](https://github.com/vuejs/vue) 的配置
 
 
 ## 1. 安装
@@ -26,6 +26,15 @@ $ npm test
 
 成功运行完成之后，在 `test_output` 文件夹下，即可以看到测试报告和覆盖率报告产物。
 
-覆盖率报告支持的输出类型：https://istanbul.js.org/docs/advanced/alternative-reporters/
 
-nyc 配置文件说明：https://www.npmjs.com/package/nyc#common-configuration-options
+### 2.1 覆盖率
+
+覆盖率报告支持的输出类型可以参考：https://istanbul.js.org/docs/advanced/alternative-reporters/ 。
+
+在本项目中，对于 `add-without-test.js` 我们没有任何测试用例，因此其行覆盖率等数据都是 `0`。
+
+而对于 `add.js` ，由于我们故意有一个分支情况没有补充用例，所以最终的行覆盖率只有 `66.67%`。
+
+注意，项目中我们增加了 `.nycrc.yml` 文件，nyc 配置文件说明：https://www.npmjs.com/package/nyc#common-configuration-options 。
+
+![](../.asset/nyc-coverage.png)
