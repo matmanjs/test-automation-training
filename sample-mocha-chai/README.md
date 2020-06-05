@@ -25,3 +25,7 @@ $ npm test
 ```
 
 成功运行完成之后，在 `test_output` 文件夹下，即可以看到测试报告和覆盖率报告产物。
+
+覆盖率报告支持的输出类型：https://istanbul.js.org/docs/advanced/alternative-reporters/
+
+nyc 配置文件说明：https://www.npmjs.com/package/nyc#common-configuration-options
