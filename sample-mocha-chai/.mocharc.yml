@@ -1,5 +1,5 @@
 require: '@babel/register'
 reporter: 'mochawesome'
 reporterOptions:
-  - 'reportDir=.test_output'
+  - 'reportDir=test_output'
 recursive: true
