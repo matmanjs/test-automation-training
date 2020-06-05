@@ -26,8 +26,18 @@ $ npm test
 
 成功运行完成之后，在 `test_output` 文件夹下，即可以看到测试报告和覆盖率报告产物。
 
+### 2.1 单元测试报告
 
-### 2.1 覆盖率
+注意，项目中我们增加了 `.mocharc.yml` 文件 。
+
+由于我们使用了 [mochawesome](https://www.npmjs.com/package/mochawesome) 来做报告输出，运行结束之后，可以打开 `test_output/mochawesome/mochawesome.html` ，可以很方便看到自动化测试的结果。
+
+![](../.asset/mochawesome.png)
+
+
+### 2.2 覆盖率报告
+
+注意，项目中我们增加了 `.nycrc.yml` 文件，nyc 配置文件说明：https://www.npmjs.com/package/nyc#common-configuration-options 。
 
 覆盖率报告支持的输出类型可以参考：https://istanbul.js.org/docs/advanced/alternative-reporters/ 。
 
@@ -35,6 +45,9 @@ $ npm test
 
 而对于 `add.js` ，由于我们故意有一个分支情况没有补充用例，所以最终的行覆盖率只有 `66.67%`。
 
-注意，项目中我们增加了 `.nycrc.yml` 文件，nyc 配置文件说明：https://www.npmjs.com/package/nyc#common-configuration-options 。
 
 ![](../.asset/nyc-coverage.png)
+
+你还可以打开 `test_output/coverage/index.html` ，可以很方便看到测试覆盖率的结果。
+
+![](../.asset/nyc-report-html.png)
