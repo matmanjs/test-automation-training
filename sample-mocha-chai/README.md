@@ -28,7 +28,15 @@ $ npm test
 
 ### 2.1 单元测试报告
 
-注意，项目中我们增加了 `.mocharc.yml` 文件 。
+注意，项目中我们增加了 `.mocharc.yml` 文件 ，mocha 配置文件说明：https://mochajs.org/#configuring-mocha-nodejs 。
+
+```yaml
+require: '@babel/register'
+reporter: 'mochawesome'
+reporterOptions:
+  - 'reportDir=test_output/mochawesome'
+recursive: true
+```
 
 由于我们使用了 [mochawesome](https://www.npmjs.com/package/mochawesome) 来做报告输出，运行结束之后，可以打开 `test_output/mochawesome/mochawesome.html` ，可以很方便看到自动化测试的结果。
 
@@ -38,6 +46,16 @@ $ npm test
 ### 2.2 覆盖率报告
 
 注意，项目中我们增加了 `.nycrc.yml` 文件，nyc 配置文件说明：https://www.npmjs.com/package/nyc#common-configuration-options 。
+
+```yaml
+all: true
+include:
+  - "src/**/*.js"
+exclude:
+  - "**/*.test.js"
+reporter: "html"
+report-dir: "test_output/coverage"
+```
 
 覆盖率报告支持的输出类型可以参考：https://istanbul.js.org/docs/advanced/alternative-reporters/ 。
 
