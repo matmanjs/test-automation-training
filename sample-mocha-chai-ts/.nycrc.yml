@@ -1,7 +1,19 @@
 all: true
 include:
   - "src/**/*.js"
+  - "src/**/*.ts"
+  - "src/**/*.tsx"
 exclude:
   - "**/*.test.js"
-reporter: "html"
+  - "**/*.test.ts"
+  - "**/*.test.tsx"
+extension:
+  - ".ts"
+  - ".tsx"
+require:
+  -  "ts-node/register"
+reporter:
+  - "html"
+  - "text-summary"
+  - "text"
 report-dir: "test_output/coverage"
