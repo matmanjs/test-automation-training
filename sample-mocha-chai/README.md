@@ -24,7 +24,7 @@ $ npm install
 $ npm test
 ```
 
-成功运行完成之后，在 `test_output` 文件夹下，即可以看到测试报告和覆盖率报告产物。
+成功运行完成之后，在 `test_output` 文件夹下，即可以看到单元测试报告和覆盖率报告产物。
 
 ### 2.1 单元测试报告
 
@@ -59,9 +59,8 @@ report-dir: "test_output/coverage"
 
 覆盖率报告支持的输出类型可以参考：https://istanbul.js.org/docs/advanced/alternative-reporters/ 。
 
-在本项目中，对于 `add-without-test.js` 我们没有任何测试用例，因此其行覆盖率等数据都是 `0`。
-
-而对于 `add.js` ，由于我们故意有一个分支情况没有补充用例，所以最终的行覆盖率只有 `66.67%`。
+- 在本项目中，对于 `add-without-test.js` 我们没有任何测试用例，因此其行覆盖率等数据都是 `0`。
+- 而对于 `add.js` ，由于我们故意有一个分支情况没有补充用例，所以最终的行覆盖率只有 `66.67%`。
 
 
 ![](../.asset/img/nyc-coverage.png)
