@@ -90,3 +90,8 @@ $ npm run build
 ```
 
 在 `package.json` 中配置 `main` 值为 `lib/index.js` 之后，一旦发布到 npm 上，则可以直接引用了。
+
+本项目中的 `tsconfig.json` 仅为参考，其他资料：
+
+- API 说明： https://www.typescriptlang.org/docs/handbook/tsconfig-json.html 
+- Schema 定义：http://json.schemastore.org/tsconfig
