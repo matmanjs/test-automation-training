@@ -2,6 +2,7 @@
   "name": "sample-mocha-chai-ts",
   "private": true,
   "scripts": {
+    "build": "tsc -d",
     "test": "npm run lint && npm run test:unit && npm run test:cover",
     "test:unit": "npx mocha 'test/**/*.{ts,tsx}'",
     "test:cover": "npx nyc npm run test:unit",

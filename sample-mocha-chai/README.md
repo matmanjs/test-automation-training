@@ -53,7 +53,10 @@ include:
   - "src/**/*.js"
 exclude:
   - "**/*.test.js"
-reporter: "html"
+reporter:
+  - "html"
+  - "text-summary"
+  - "text"
 report-dir: "test_output/coverage"
 ```
 
