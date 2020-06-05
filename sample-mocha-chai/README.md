@@ -32,7 +32,7 @@ $ npm test
 
 由于我们使用了 [mochawesome](https://www.npmjs.com/package/mochawesome) 来做报告输出，运行结束之后，可以打开 `test_output/mochawesome/mochawesome.html` ，可以很方便看到自动化测试的结果。
 
-![](../.asset/mochawesome.png)
+![](../.asset/img/mochawesome.png)
 
 
 ### 2.2 覆盖率报告
@@ -46,8 +46,8 @@ $ npm test
 而对于 `add.js` ，由于我们故意有一个分支情况没有补充用例，所以最终的行覆盖率只有 `66.67%`。
 
 
-![](../.asset/nyc-coverage.png)
+![](../.asset/img/nyc-coverage.png)
 
 你还可以打开 `test_output/coverage/index.html` ，可以很方便看到测试覆盖率的结果。
 
-![](../.asset/nyc-report-html.png)
+![](../.asset/img/nyc-report-html.png)
