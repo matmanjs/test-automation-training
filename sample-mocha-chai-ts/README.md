@@ -80,3 +80,13 @@ report-dir: "test_output/coverage"
 你还可以打开 `test_output/coverage/index.html` ，可以很方便看到测试覆盖率的结果。
 
 ![](../.asset/img/nyc-report-html.png)
+
+### 2.3 构建
+
+本项目提供了一个简单的构建，将 ts 源码构建并生成到 `lib` 目录下，执行命令为：
+
+```bash
+$ npm run build
+```
+
+在 `package.json` 中配置 `main` 值为 `lib/index.js` 之后，一旦发布到 npm 上，则可以直接引用了。
