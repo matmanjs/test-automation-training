@@ -9,3 +9,15 @@ $ npm install
 ```
 
 ## 2. 示例说明
+
+运行自动化测试：
+
+```bash
+$ npm test
+```
+
+如果需要展示出浏览器，则运行：
+
+```bash
+$ npm run test:show
+```
