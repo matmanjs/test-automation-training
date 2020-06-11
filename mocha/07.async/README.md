@@ -111,3 +111,5 @@ describe('timeout.test.js - 超时测试', function () {
     });
 });
 ```
+
+注意，Mocha 中并不推荐使用 `ARROW FUNCTIONS`，主要原因是上述的 `this`，具体原因请查看 [ARROW FUNCTIONS](https://mochajs.org/#arrow-functions) 。
