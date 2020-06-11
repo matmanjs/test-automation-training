@@ -6,7 +6,7 @@
 
 ![](../.asset/img/mocha-solo.png)
 
-本项目为 mocha 的学习项目，根据 mocha 最常见的场景，分别有对应的学习主题和实际示例。每个学习主题所包含的技能点在 README.md 中均有呈现，建议 clone 项目之后亲自实践！
+本项目为 mocha 的学习项目，根据 mocha 最常见的场景，分别有对应的学习主题和实际示例。每个学习主题所包含的技能点在 README.md 中均描述，建议 clone 项目之后亲自实践！
 
 - [01.getting-started](./01.getting-started): 最简单的示例，适合入门
 - [02.mocha-test-directory](./02.mocha-test-directory): 测试用例放置的目录
