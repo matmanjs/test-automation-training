@@ -39,8 +39,8 @@ $ npm install
 使用方式为：
 
 ```js
-setDeviceConfig('mobile')
-setDeviceConfig('pc')
+page.setDeviceConfig('mobile')
+page.setDeviceConfig('pc')
 ```
 
 体验方式：
@@ -59,7 +59,7 @@ $ node demo_pc.js
 使用方式为：
 
 ```js
-setDeviceConfig({
+page.setDeviceConfig({
   'UA': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36 mycustomua',
   'width': 1250,
   'height': 400
