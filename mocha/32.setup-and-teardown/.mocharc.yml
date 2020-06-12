@@ -1,0 +1,4 @@
+recursive: true
+file:
+  - "./setup.js"
+  - "./teardown.js"
