@@ -10,13 +10,16 @@ $ npm install
 
 ## 2. 示例说明
 
-### 2.1 预定义支持的设备
+matman 内置了多种预定义的设备仿真，包括  `mobile` 和 `pc`，未来会扩展更多机型。如果当前已预定义的设备类型无法满足您的诉求，您完全可以自定义设置包括 `userAgent` 和浏览器宽高等参数。
 
-内置了 `mobile` 和 `pc` 两种（计划未来扩展多种，按照机型）：
+> 需要特别注意的是，有些页面时自适应的，`userAgent` 和浏览器宽高不一样时，可能会有不一样的布局。因此在实际使用过程中，需要按情况处理。例如我们的示例中，[demo_mobile.js](./demo_pc.js) 和 [demo_mobile.js](./demo_pc.js) 都是打开了百度首页，但是网页有明显区别（例如搜索按钮的 `id` 就已经不一样了），您可以启动 demo 进行体验便知。
 
-`mobile` 适用于移动端测试场景，是 iPhone 6 的尺寸。
 
-> iphone6 尺寸为 `375*667`，但是 nightmare 中滚动条的缘故，实际尺寸应该修改为 `414*760`
+### 2.1 demo_mobile.js
+
+matman 内置了多种预定义的设备仿真，其中 `mobile` 便是其中之一。`mobile` 适用于移动端测试场景，是 `iPhone 6` 的尺寸。
+
+> iphone6 尺寸为 `375*667`，但是 nightmare 中滚动条的缘故，因此预定义的浏览器尺寸为 `414*760` 。
 
 ```
 {
@@ -26,7 +29,21 @@ $ npm install
 }
 ```
 
-`pc` 适用于 PC 测试场景。
+使用方式（完整代码请查看[demo_mobile.js](./demo_mobile.js)）：
+
+```js
+page.setDeviceConfig('mobile')
+```
+
+体验方式：
+
+```bash
+$ node demo_mobile.js
+```
+
+### 2.2 demo_pc.js
+
+matman 内置了多种预定义的设备仿真，其中 `pc` 便是其中之一。`pc` 适用于 PC 测试场景。
 
 ```
 {
@@ -36,27 +53,27 @@ $ npm install
 }
 ```
 
-使用方式为：
+使用方式（完整代码请查看[demo_pc.js](./demo_pc.js)）：
 
 ```js
-page.setDeviceConfig('mobile')
 page.setDeviceConfig('pc')
 ```
 
 体验方式：
 
 ```bash
-$ node demo_mobile.js
 $ node demo_pc.js
 ```
 
+### 2.3 demo_custom.js
 
-### 2.2 自定义设备参数
+可以自行定义设备参数，传递一个对象，包括:
 
-可以自行定义设备参数，传递一个对象，包括 `UA`、`width` 和 `height`。
+ - `UA`：`String`，会设置到 `navigator.userAgent` 中
+ - `width`：`Number`，浏览器宽度
+ - `height`：`Number`，浏览器高度
 
-
-使用方式为：
+使用方式（完整代码请查看[demo_custom.js](./demo_custom.js)）：
 
 ```js
 page.setDeviceConfig({
