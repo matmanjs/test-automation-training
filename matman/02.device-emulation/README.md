@@ -12,7 +12,7 @@ $ npm install
 
 matman 内置了多种预定义的设备仿真，包括  `mobile` 和 `pc`，未来会扩展更多机型。如果当前已预定义的设备类型无法满足您的诉求，您完全可以自定义设置包括 `userAgent` 和浏览器宽高等参数。
 
-> 需要特别注意的是，有些页面时自适应的，`userAgent` 和浏览器宽高不一样时，可能会有不一样的布局。因此在实际使用过程中，需要按情况处理。例如我们的示例中，[demo_mobile.js](./demo_pc.js) 和 [demo_mobile.js](./demo_pc.js) 都是打开了百度首页，但是网页有明显区别（例如搜索按钮的 `id` 就已经不一样了），您可以启动 demo 进行体验便知。
+> 需要特别注意的是，有些页面会自适应的，同样一个网也，会因为 `userAgent` 和浏览器宽高不一样，可能会有不一样的布局。因此在实际使用过程中，需要按情况处理。例如我们的示例中，[demo_mobile.js](./demo_pc.js) 和 [demo_pc.js](./demo_pc.js) 都是打开了百度首页，但是网页展示有明显区别（例如搜索按钮的 `id` 就已经不一样），您可以启动 demo 进行体验便知。
 
 
 ### 2.1 demo_mobile.js
@@ -29,7 +29,7 @@ matman 内置了多种预定义的设备仿真，其中 `mobile` 便是其中之
 }
 ```
 
-使用方式（完整代码请查看[demo_mobile.js](./demo_mobile.js)）：
+使用方式（完整代码请查看 [demo_mobile.js](./demo_mobile.js)）：
 
 ```js
 page.setDeviceConfig('mobile')
@@ -53,7 +53,7 @@ matman 内置了多种预定义的设备仿真，其中 `pc` 便是其中之一�
 }
 ```
 
-使用方式（完整代码请查看[demo_pc.js](./demo_pc.js)）：
+使用方式（完整代码请查看 [demo_pc.js](./demo_pc.js)）：
 
 ```js
 page.setDeviceConfig('pc')
@@ -73,7 +73,7 @@ $ node demo_pc.js
  - `width`：`Number`，浏览器宽度
  - `height`：`Number`，浏览器高度
 
-使用方式（完整代码请查看[demo_custom.js](./demo_custom.js)）：
+使用方式（完整代码请查看 [demo_custom.js](./demo_custom.js)）：
 
 ```js
 page.setDeviceConfig({
