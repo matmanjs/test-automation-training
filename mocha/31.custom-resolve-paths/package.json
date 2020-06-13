@@ -2,8 +2,8 @@
   "name": "31.custom-resolve-paths",
   "private": true,
   "scripts": {
-    "build": "npx webpack",
-    "test": "npx mocha"
+    "build": "webpack",
+    "test": "mocha"
   },
   "devDependencies": {
     "app-module-path": "^2.2.0",

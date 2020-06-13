@@ -2,8 +2,8 @@
   "name": "07.async",
   "private": true,
   "scripts": {
-    "test": "npx mocha",
-    "test-custom-timeout": "npx mocha --timeout=4000"
+    "test": "mocha",
+    "test-custom-timeout": "mocha --timeout=4000"
   },
   "devDependencies": {
     "axios": "^0.19.2",

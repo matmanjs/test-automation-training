@@ -2,8 +2,8 @@
   "name": "03.command-line-argument",
   "private": true,
   "scripts": {
-    "test": "npx mocha --recursive --reporter mochawesome --reporter-options reportDir=.test_output",
-    "coverage": "npx nyc npm test"
+    "test": "mocha --recursive --reporter mochawesome --reporter-options reportDir=.test_output",
+    "coverage": "nyc npm test"
   },
   "devDependencies": {
     "chai": "^4.2.0",

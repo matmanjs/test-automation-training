@@ -2,9 +2,9 @@
   "name": "06.ts",
   "private": true,
   "scripts": {
-    "test": "npx mocha --require ts-node/register 'test/**/*.{ts,tsx}'",
-    "test-watch": "npx mocha --require ts-node/register --extensions ts,tsx --watch --watch-files src 'test/**/*.{ts,tsx}'",
-    "test-ts-mocha": "npx ts-mocha -p tsconfig.json 'test/**/*.test.ts'"
+    "test": "mocha --require ts-node/register 'test/**/*.{ts,tsx}'",
+    "test-watch": "mocha --require ts-node/register --extensions ts,tsx --watch --watch-files src 'test/**/*.{ts,tsx}'",
+    "test-ts-mocha": "ts-mocha -p tsconfig.json 'test/**/*.test.ts'"
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",

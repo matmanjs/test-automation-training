@@ -2,7 +2,7 @@
   "name": "07.hooks",
   "private": true,
   "scripts": {
-    "test": "npx mocha"
+    "test": "mocha"
   },
   "devDependencies": {
     "chai": "^4.2.0",
