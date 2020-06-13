@@ -57,16 +57,16 @@ $ ./node_modules/mocha/bin/mocha add.test.js
 
 ## 3. 如何简化执行测试的命令
 
-上述执行测试的命令比较长，一般有三种方式可以简化。
+上述示例中执行测试的命令比较长，一般有三种方式可以简化。
 
 ### 3.1 在 package.json 中定义 script 命令
 
-推荐做法！在 `package.json` 中增加自定义的 `script` 命令，例如增加：
+业界最常用的推荐做法！在 `package.json` 中增加自定义的 `script` 命令，例如增加：
 
 ```json
 {
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha *.test.js"
+     "test": "./node_modules/mocha/bin/mocha *.test.js"
   }
 }
 ```
@@ -75,6 +75,24 @@ $ ./node_modules/mocha/bin/mocha add.test.js
 
 ```bash
 $ npm test
+```
+
+由于在本示例中在本地安装了 `mocha`，因此还可以直接使用 `mocha` 命令：
+
+> 推荐这种写法
+
+```json
+{
+  "scripts": {
+     "test-use-local-mocha": "mocha *.test.js"
+  }
+}
+```
+
+上述定义了之后，就可以简化命令为：
+
+```bash
+$ npm run test-use-local-mocha
 ```
 
 ### 3.2 使用 npx

@@ -3,10 +3,11 @@
   "private": false,
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha *.test.js",
-    "test-npx": "npx mocha *.test.js"
+    "test-npx": "npx mocha *.test.js",
+    "test-use-local-mocha": "mocha *.test.js"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.2.0"
+    "mocha": "^8.0.1"
   }
 }
