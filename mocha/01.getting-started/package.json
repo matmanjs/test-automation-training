@@ -2,9 +2,9 @@
   "name": "01.getting-started",
   "private": false,
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha *.test.js",
+    "test": "mocha *.test.js",
     "test-npx": "npx mocha *.test.js",
-    "test-use-local-mocha": "mocha *.test.js"
+    "test-another-way": "./node_modules/mocha/bin/mocha *.test.js"
   },
   "devDependencies": {
     "chai": "^4.2.0",

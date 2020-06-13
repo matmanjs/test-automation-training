@@ -57,7 +57,7 @@ $ ./node_modules/mocha/bin/mocha add.test.js
 
 ## 3. 如何简化执行测试的命令
 
-上述示例中执行测试的命令比较长，一般有三种方式可以简化。
+在上述示例中，执行测试的命令比较长，使用起来不太方便。推荐三种简化方式。
 
 ### 3.1 在 package.json 中定义 script 命令
 
@@ -66,7 +66,8 @@ $ ./node_modules/mocha/bin/mocha add.test.js
 ```json
 {
   "scripts": {
-     "test": "./node_modules/mocha/bin/mocha *.test.js"
+     "test": "mocha *.test.js",
+     "test-another-way": "./node_modules/mocha/bin/mocha *.test.js"
   }
 }
 ```
@@ -75,32 +76,23 @@ $ ./node_modules/mocha/bin/mocha add.test.js
 
 ```bash
 $ npm test
+
+# 或者
+$ npm run test-another-way
 ```
 
-由于在本示例中在本地安装了 `mocha`，因此还可以直接使用 `mocha` 命令：
+有两个点要特别强调一下：
 
-> 推荐这种写法
+第一，`npm test` 可以看做是 `npm run test` 的简写形式，与此类似的，`npm start` 也可以看做 `npm run start` 的简写。但这种方式只有少数特例，例如 `npm run test-another-way` 就不能简写为 `npm test-another-way`。具体原因可以阅读 [npm-run-script](https://docs.npmjs.com/cli-commands/run-script.html) 和 [npm-test](https://docs.npmjs.com/cli-commands/test) 。
 
-```json
-{
-  "scripts": {
-     "test-use-local-mocha": "mocha *.test.js"
-  }
-}
-```
+第二，在 `scripts` 中我们可以定义直接使用 `mocha *.test.js` ，此时等效于 `./node_modules/mocha/bin/mocha *.test.js` 。但如果你在 cmd 中直接运行 `mocha *.test.js`，则会提示 `command not found: mocha` 的错误。
 
-上述定义了之后，就可以简化命令为：
-
-```bash
-$ npm run test-use-local-mocha
-```
 
 ### 3.2 使用 npx
 
-可以使用 [npx](https://www.npmjs.com/package/npx) 命令可以简化。
+可以使用 [npx](https://www.npmjs.com/package/npx) 命令可以简化，支持直接在命令行中执行。
 
 ```bash
-$ # ./node_modules/mocha/bin/mocha add.test.js
 $ npx mocha add.test.js
 ```
 
