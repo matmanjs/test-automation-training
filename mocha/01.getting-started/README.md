@@ -83,9 +83,9 @@ $ npm run test-another-way-in-mac-or-linux
 
 有两个点要特别强调一下：
 
-第一，`npm test` 可以看做是 `npm run test` 的简写形式，与此类似的，`npm start` 也可以看做 `npm run start` 的简写。但这种方式只有少数特例，例如 `npm run test-another-way` 就不能简写为 `npm test-another-way`。具体原因可以阅读 [npm-run-script](https://docs.npmjs.com/cli-commands/run-script.html) 和 [npm-test](https://docs.npmjs.com/cli-commands/test) 。
+第一，`npm test` 可以看做是 `npm run test` 的简写形式，与此类似的，`npm start` 也可以看做 `npm run start` 的简写。但这种方式只有少数特例，例如 `npm run test-another-way` 就不能简写为 `npm test-another-way`。具体细节可以阅读 [npm-run-script](https://docs.npmjs.com/cli-commands/run-script.html) 和 [npm-test](https://docs.npmjs.com/cli-commands/test) 。
 
-第二，在 `scripts` 中我们可以定义直接使用 `mocha *.test.js` ，此时等效于 `./node_modules/mocha/bin/mocha *.test.js` 。但如果你在 cmd 中直接运行 `mocha *.test.js`，则会提示 `command not found: mocha` 的错误，这是要么借助 `npx`，要么全局安装 `mocha` 。
+第二，在 `scripts` 中我们可以定义直接使用 `mocha *.test.js` ，此时等效于 `./node_modules/mocha/bin/mocha *.test.js` 。但如果你在 cmd 中直接运行 `mocha *.test.js`，则会提示 `command not found: mocha` 的错误。如果要在命令行中简化命令，要么借助 `npx`，要么全局安装 `mocha` 。
 
 
 ### 3.2 借助 npx 直接将本地 mocha 模块当做全局模块使用
