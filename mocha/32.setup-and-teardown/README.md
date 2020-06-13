@@ -1,10 +1,11 @@
 # 32.setup-and-teardown
 
-有些时候我们需要在测试之前或者测试完成之后做一些自定义的事情，此时可以通过 `--file`
+Mocha 提供了一些全局勾子事件，可以在测试前、测试中和测试后做一些自定义的事情。
 
 - [--file <file|directory|glob>](https://mochajs.org/#-file-filedirectoryglob)
-- [Mocha — Global Setup and Teardown (before/after)](https://futurestud.io/tutorials/mocha-global-setup-and-teardown-before-after)
+- [ROOT HOOK PLUGINS](https://mochajs.org/#root-hook-plugins)
 - [AVAILABLE ROOT HOOKS](https://mochajs.org/#available-root-hooks)
+- [Mocha — Global Setup and Teardown (before/after)](https://futurestud.io/tutorials/mocha-global-setup-and-teardown-before-after)
 
 
 ## 1. 安装
