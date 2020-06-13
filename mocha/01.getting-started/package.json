@@ -4,7 +4,8 @@
   "scripts": {
     "test": "mocha *.test.js",
     "test-npx": "npx mocha *.test.js",
-    "test-another-way": "./node_modules/mocha/bin/mocha *.test.js"
+    "test-another-way": "node ./node_modules/mocha/bin/mocha *.test.js",
+    "test-another-way-in-mac-or-linux": "./node_modules/mocha/bin/mocha *.test.js"
   },
   "devDependencies": {
     "chai": "^4.2.0",
