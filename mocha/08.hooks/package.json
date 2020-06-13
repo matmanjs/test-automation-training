@@ -1,11 +1,11 @@
 {
-  "name": "07.hooks",
+  "name": "08.hooks",
   "private": true,
   "scripts": {
     "test": "mocha"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.2.0"
+    "mocha": "^8.0.1"
   }
 }
