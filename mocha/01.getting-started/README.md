@@ -59,8 +59,6 @@ $ npx mocha add.test.js
 
 ## 3. 执行 Mocha 命令的方式
 
-在上述示例中，执行测试的命令比较长，使用起来不太方便。推荐三种简化方式。
-
 ### 3.1 借助 package.json 中的 scripts 
 
 业界最常用的推荐做法！在 `package.json` 中增加自定义的 `script` 命令，：
