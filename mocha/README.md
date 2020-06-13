@@ -6,7 +6,14 @@
 
 ![](../.asset/img/mocha-solo.png)
 
-本项目为 mocha 的学习项目，根据 mocha 最常见的场景，分别有对应的学习主题和实际示例。每个学习主题所包含的技能点在 README.md 中均描述，建议 clone 项目之后亲自实践！
+## 1. 项目说明
+
+本项目为 mocha 的学习项目，根据 mocha 最常见的场景，分别有对应的学习主题和案例。每个学习主题所包含的技能点在 README.md 中均描述，建议 clone 项目之后亲自实践！
+
+- 示例都是基于 mocha 的 `v8.x` 版本，如果您使用的是 mocha 的其他版本，则可能需要阅读官网文档来查看差异
+- 所有示例代码均已在 `iMac` 和 `Windows 10` 进行了验证，如果您发现有什么问题，欢迎给我们提 [pr](https://github.com/matmanjs/test-automation-training/pulls) 或 [issue](https://github.com/matmanjs/test-automation-training/issues)
+
+## 2. 目录
 
 - [01.getting-started](./01.getting-started): 最简单的示例，适合入门
 - [02.mocha-test-directory](./02.mocha-test-directory): 测试用例放置的目录
