@@ -16,25 +16,6 @@ $ npm install
 
 ## 2. 示例说明
 
-当测试文件在 `test` 目录下时，无需指定 `test` 目录，再加上 `--recursive` 参数，这样就能执行 `test` 子目录中的测试文件了。
-
-> 业界普遍将 `test` 目录作为测试文件目录，建议大家也按此规定来。
-
-```bash
-$ npx mocha --recursive
-```
-
-但如果测试文件不是在 `test` 目录下，例如在 `test-other-folder` 中，则执行命令中需要追加文件目录：
-
-```bash
-$ # 执行 test-other-folder 下的测试用例
-$ npx mocha test-other-folder --recursive
-
-$ # 执行 test-other-folder/dir 下的测试用例
-$ npx mocha test-other-folder/dir --recursive
-```
-
-
 ### 2.1 使用 --require 和 ROOT HOOK PLUGINS
 
 Mocha `v8.x` 之后，提供了新的 [ROOT HOOK PLUGINS](https://mochajs.org/#root-hook-plugins) 方式来写，并提供了 `beforeAll`、`beforeEach`、`afterAll` 和 `afterEach` 四个函数，具体请查看 [AVAILABLE ROOT HOOKS](https://mochajs.org/#available-root-hooks) 。
@@ -101,7 +82,7 @@ $ npx mocha --require ./test-hooks.js --recursive
 ```
 
 
-### 使用 --file 方式
+### 2.2 使用 --file 方式
 
 使用 `--file` 来定义的全局勾子，只适用于 `serial mode` 串行模式下。在 Mocha `v8.x` 之前，只支持串行执行测试用例，`v8.x` 之后，默认情况也是串行模式。这种情况下，可以通过 `before`、`beforeEach`、`after` 和 `afterEach` 等勾子。
 
