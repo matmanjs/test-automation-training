@@ -36,7 +36,7 @@ $ npx mocha getting-started.test.js
 
 ### 2.2 使用 chai 做断言库的简单例子
 
-Mocha 可以搭配[任意断言库(assertion library)](https://mochajs.org/#assertions)，我们选择了 [chai](https://www.chaijs.com/) ，因为 Mocha + Chai 这种搭配方式应用范围最广，并使用 [expect](https://www.chaijs.com/api/bdd/) 这种 `BDD` 方式，因为它更接近于自然语言，相对比较容易理解些。
+Mocha 可以搭配[任意断言库(assertion library)](https://mochajs.org/#assertions) 。因为 Mocha + Chai 这种搭配方式应用范围最广，我们选择了 [chai](https://www.chaijs.com/) ，并使用 [expect](https://www.chaijs.com/api/bdd/) 这种 `BDD` 方式，原因是它更接近于自然语言，相对比较容易理解些。
 
 `add.test.js` 示例代码如下：
 
