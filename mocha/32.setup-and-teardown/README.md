@@ -31,3 +31,58 @@ $ npx mocha test-other-folder --recursive
 $ # 执行 test-other-folder/dir 下的测试用例
 $ npx mocha test-other-folder/dir --recursive
 ```
+
+
+## 使用 --file 方式
+
+使用 `--file` 来定义的全局勾子，只适用于 `serial mode` 串行模式下。在 Mocha `v8.x` 之前，只支持串行执行测试用例，`v8.x` 之后，默认情况也是串行模式。这种情况下，可以通过 `before`、`beforeEach`、`after` 和 `afterEach` 等勾子。
+
+例如 [test/setup.js](./test/setup.js) :
+
+```js
+// root hook to run before all test
+before(() => {
+  console.log('[hooks] before');
+});
+
+// root hook to run before every test (even in other files)
+beforeEach(() => {
+  console.log('[hooks] beforeEach');
+});
+
+// root hook to run after all test
+after(() => {
+  console.log('[hooks] after');
+});
+
+// root hook to run after every test (even in other files)
+afterEach(function () {
+  console.log('[hooks] afterEach');
+});
+```
+
+执行命令 
+
+```
+$npx mocha --file ./test/setup.js --recursive"
+```
+
+可以看到输出结果如下：
+
+```text
+[hooks] before
+  加法函数的测试
+[hooks] beforeEach
+    ✓ 1 加 1 应该等于 2
+[hooks] afterEach
+[hooks] beforeEach
+    ✓ 任何数加0应该等于自身
+[hooks] afterEach
+
+  乘法函数的测试
+[hooks] beforeEach
+    ✓ 1 乘 1 应该等于 1
+[hooks] afterEach
+
+[hooks] after
+```
