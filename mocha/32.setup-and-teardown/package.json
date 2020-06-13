@@ -2,7 +2,8 @@
   "name": "32.setup-and-teardown",
   "private": false,
   "scripts": {
-    "test": "mocha --file ./test/setup.js --recursive"
+    "test": "mocha --file ./test-setup.js --recursive",
+    "test-hooks": "mocha --require ./test-hooks.js --recursive"
   },
   "devDependencies": {
     "chai": "^4.2.0",
