@@ -16,11 +16,13 @@
     "test-reporter-doc": "mocha --reporter doc",
     "test-reporter-markdown": "mocha --reporter markdown",
     "test-reporter-xunit": "mocha --reporter xunit",
-    "test-reporter-mochawesome": "mocha --reporter mochawesome --reporter-options reportDir=.test_output"
+    "test-reporter-mochawesome": "mocha --reporter mochawesome --reporter-options reportDir=.test_output",
+    "test-reporter-junit": "mocha --reporter mocha-junit-reporter --reporter-options mochaFile=.test_output/test-result.xml"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^8.0.1",
+    "mocha-junit-reporter": "^2.0.0",
     "mochawesome": "^6.1.1"
   }
 }
