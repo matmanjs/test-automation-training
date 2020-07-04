@@ -25,7 +25,7 @@ $ node baidu.js
 对应的代码如下：
 
 ```js
-  // 第一步：开始操作之前
+  // 第一步：开始操作之前，等待页面加载完成
   await pageDriver.addAction('init', async page => {
     await page.waitFor('#su');
   });
@@ -56,3 +56,7 @@ $ node baidu.js
         ├── baidu_js_2.png
         └── baidu_js_3.png
 ```
+
+三个动作产生了三份数据快照，接下来就可以针对这些数据快照做校验，这个过程，也就是端对端测试的过程了。
+
+![](../../.asset/img/baidu-search.png)
