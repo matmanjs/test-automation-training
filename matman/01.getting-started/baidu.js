@@ -1,50 +1,49 @@
-const matman = require('matman');
+const matman = require("matman");
+const { BrowserRunner } = require("matman-runner-puppeteer");
 
-matman
+module.exports = async (pageDriverOpts) => {
+  // 创建 PageDriver 对象，使用它可以实现对浏览器页面的控制
+  const pageDriver = await matman.launch(new BrowserRunner(), pageDriverOpts);
 
-  // 创建 Browser 对象，使用它对浏览器进行设置
-  .launch({ show: true })
-
-  // 创建 Page 对象，使用它可以实现对浏览器页面的控制
-  .newPage(__filename)
-
-  // 设置浏览器参数
-  .setDeviceConfig({
-    'UA': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36 mycustomua',
-    'width': 1250,
-    'height': 400
-  })
+  // 设置浏览器打开时所模拟的设备参数
+  await pageDriver.setDeviceConfig({
+    userAgent:
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36 mycustomua",
+    viewport: {
+      width: 1024,
+      height: 520,
+    },
+  });
 
   // 设置截屏
-  .setScreenshotConfig(true)
+  await pageDriver.setScreenshotConfig(true);
 
-  // 加载页面地址
-  .goto('https://www.baidu.com')
+  // 设置页面地址
+  await pageDriver.setPageUrl("https://www.baidu.com");
 
-  // 需要等待某些条件达成，才开始运行爬虫脚本
-  .wait('#su')
+  // 增加一个操作行为
+  await pageDriver.addAction("init", async (page) => {
+    await page.waitFor("#su");
+  });
 
-  // 爬虫脚本的函数，用于获取页面中的数据
-  .evaluate(() => {
+  // 计算并返回结果
+  return pageDriver.evaluate(() => {
     return {
       title: document.title,
       width: window.innerWidth,
       height: window.innerHeight,
       userAgent: navigator.userAgent,
       _version: Date.now(),
-      searchBtnTxt: document.querySelector('#su').value
+      searchBtnTxt: document.querySelector("#su").value,
     };
-  })
-
-  // 结束，获取结果
-  .end()
-  .then((data) => {
-    console.log('==执行成功==');
-    console.log(data);
-  })
-  .catch((err) => {
-    console.log('==执行失败==');
-    console.error(err);
   });
+};
 
-
+// module
+//   .exports({ show: true, doNotCloseBrowser: true, useRecorder: false })
+//   .then(function (result) {
+//     console.log(JSON.stringify(result));
+//   })
+//   .catch(function (error) {
+//     console.error("failed:", error);
+//   });
