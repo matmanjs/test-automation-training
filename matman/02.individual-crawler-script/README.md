@@ -93,6 +93,6 @@ module.exports = () => {
 };
 ```
 
-关注点一： 这里我们引入了 npm 模块 [lodash](https://www.npmjs.com/package/lodash) ，当然你还可以引入其他的模块，例如我们的 [web-crawl-util](https://www.npmjs.com/package/lodash) 组件提供了常见的一些工具函数，后续 demo 中还会提到，此处略过。
+关注点一： 这里我们引入了 npm 模块 [lodash](https://www.npmjs.com/package/lodash) ，当然你还可以引入其他的模块，例如我们的 [web-crawl-util](https://www.npmjs.com/package/lodash) 组件提供了常见的一些工具函数用于方便爬取信息，后续 demo 中还会提到，此处略过。
 
 关注点二： 不仅如此，我们还复用了 `./crawlers/get-page-info.js` 这个独立的爬虫脚本模块。这样做的好处可以更好的组织爬虫脚本代码，对于复杂页面尤为方便。
