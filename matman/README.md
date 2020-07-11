@@ -6,7 +6,9 @@
 本项目为 [matman](https://github.com/matmanjs/matman) 的学习项目，我们整理了最常使用的场景，分多个学习主题，每个学习主题所包含的技能点在 README.md 中均描述，建议 clone 项目之后亲自实践！
 
 - [01.getting-started](./01.getting-started): 最简单的示例，适合入门
-- [02.device-emulation](./02.device-emulation): 设备仿真，定义无头浏览器ua和大小
+- [02.individual-crawler-script](./02.individual-crawler-script): 独立的爬虫脚本
+- [03.crawler-inject-jquery](./03.crawler-inject-jquery): 注入 jQuery 方便写爬虫脚本
+- [04.device-emulation](./04.device-emulation): 设备仿真，定义无头浏览器ua和大小
 - [51.e2e-test](./51.e2e-test): 使用 matman 做端对端测试的简单例子
 
 

@@ -1,0 +1,8 @@
+{
+  "name": "03.crawler-inject-jquery",
+  "private": false,
+  "dependencies": {
+    "matman": "^6.0.5",
+    "matman-runner-puppeteer": "^6.0.5"
+  }
+}

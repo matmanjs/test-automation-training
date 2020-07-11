@@ -1,5 +1,5 @@
 {
-  "name": "02.device-emulation",
+  "name": "04.device-emulation",
   "private": false,
   "scripts": {
     "test": "mocha",
