@@ -1,0 +1,8 @@
+{
+  "name": "02.individual-crawler-script",
+  "private": false,
+  "dependencies": {
+    "matman": "^6.0.5",
+    "matman-runner-puppeteer": "^6.0.5"
+  }
+}
