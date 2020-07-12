@@ -39,7 +39,7 @@ module.exports = async (pageDriverOpts) => {
 };
 
 module
-  .exports({ show: true, doNotCloseBrowser: false, useRecorder: false })
+  .exports({ show: true, doNotCloseBrowser: true, useRecorder: false })
   .then(function (result) {
     console.log(JSON.stringify(result));
   })
