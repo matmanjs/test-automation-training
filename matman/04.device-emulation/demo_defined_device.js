@@ -6,19 +6,8 @@ module.exports = async (pageDriverOpts) => {
   const pageDriver = await matman.launch(new BrowserRunner(), pageDriverOpts);
 
   // 设置浏览器打开时所模拟的设备参数
-  await pageDriver.setDeviceConfig({
-    name: 'custom',
-    userAgent:
-      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36 matman/custom',
-    viewport: {
-      width: 888,
-      height: 666,
-      deviceScaleFactor: 1,
-      isMobile: false,
-      hasTouch: false,
-      isLandscape: false,
-    },
-  });
+  // https://github.com/puppeteer/puppeteer/blob/main/src/common/DeviceDescriptors.ts
+  await pageDriver.setDeviceConfig('iPhone XR');
 
   // 设置截屏
   await pageDriver.setScreenshotConfig(true);
@@ -28,7 +17,7 @@ module.exports = async (pageDriverOpts) => {
 
   // 第一步：开始操作之前，等待页面加载完成
   await pageDriver.addAction('init', async page => {
-    await page.waitFor('#su');
+    await page.waitFor('#index-bn');
   });
 
   // 计算并返回结果
@@ -38,7 +27,7 @@ module.exports = async (pageDriverOpts) => {
       width: window.innerWidth,
       height: window.innerHeight,
       userAgent: navigator.userAgent,
-      searchBtnTxt: document.querySelector('#su').value
+      searchBtnTxt: document.querySelector('#index-bn').innerText,
     };
   });
 };
