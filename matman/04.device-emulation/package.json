@@ -1,14 +1,8 @@
 {
   "name": "04.device-emulation",
   "private": false,
-  "scripts": {
-    "test": "mocha",
-    "test:show": "cross-env SHOW_BROWSER=1 npm run test"
-  },
   "dependencies": {
-    "matman": "^5.0.9"
-  },
-  "devDependencies": {
-    "cross-env": "^7.0.2"
+    "matman": "^6.0.6",
+    "matman-runner-puppeteer": "^6.0.6"
   }
 }

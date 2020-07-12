@@ -1,44 +1,41 @@
 const matman = require('matman');
+const { BrowserRunner } = require('matman-runner-puppeteer');
 
-matman
+module.exports = async (pageDriverOpts) => {
+  // 创建 PageDriver 对象，使用它可以实现对浏览器页面的控制
+  const pageDriver = await matman.launch(new BrowserRunner(), pageDriverOpts);
 
-  // 创建 Browser 对象，使用它对浏览器进行设置
-  .launch({ show: true })
-
-  // 创建 Page 对象，使用它可以实现对浏览器页面的控制
-  .newPage(__filename)
-
-  // 设置浏览器参数
-  .setDeviceConfig('mobile')
+  // 设置浏览器打开时所模拟的设备参数
+  await pageDriver.setDeviceConfig('mobile');
 
   // 设置截屏
-  .setScreenshotConfig(true)
+  await pageDriver.setScreenshotConfig(true);
 
-  // 加载页面地址
-  .goto('https://www.baidu.com')
+  // 设置页面地址
+  await pageDriver.setPageUrl('https://www.baidu.com');
 
-  // 需要等待某些条件达成，才开始运行爬虫脚本
-  .wait('#index-bn')
+  // 第一步：开始操作之前，等待页面加载完成
+  await pageDriver.addAction('init', async page => {
+    await page.waitFor('#index-bn');
+  });
 
-  // 爬虫脚本的函数，用于获取页面中的数据
-  .evaluate(() => {
+  // 计算并返回结果
+  return pageDriver.evaluate(() => {
     return {
       title: document.title,
       width: window.innerWidth,
       height: window.innerHeight,
-      userAgent: navigator.userAgent
+      userAgent: navigator.userAgent,
+      searchBtnTxt: document.querySelector('#index-bn').innerText,
     };
-  })
-
-  // 结束，获取结果
-  .end()
-  .then((data) => {
-    console.log('==执行成功==');
-    console.log(data);
-  })
-  .catch((err) => {
-    console.log('==执行失败==');
-    console.error(err);
   });
+};
 
-
+module
+  .exports({ show: true, doNotCloseBrowser: true, useRecorder: false })
+  .then(function (result) {
+    console.log(JSON.stringify(result));
+  })
+  .catch(function (error) {
+    console.error('failed:', error);
+  });
