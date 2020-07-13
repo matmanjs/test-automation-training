@@ -1,0 +1,16 @@
+{
+  "name": "09.matman-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "matman": "^6.0.6",
+    "matman-runner-puppeteer": "^6.0.6"
+  }
+}
