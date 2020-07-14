@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="fetchDemo1()" id="button1">demo_cgi</button>
+    <button onclick="fetchDemo2()" id="button2">demo_cgi2</button>
+
+    <script>
+      async function fetchDemo1() {
+        await fetch('https://cgi.now.qq.com/cgi-bin/a/b/demo_cgi');
+        const wait1 = document.createElement('div');
+        wait1.id = 'wait1';
+        document.body.append(wait1);
+      }
+
+      async function fetchDemo2() {
+        await fetch('https://cgi.now.qq.com/cgi-bin/a/b/demo_cgi2');
+        const wait2 = document.createElement('div');
+        wait2.id = 'wait2';
+        document.body.append(wait2);
+      }
+    </script>
+  </body>
+</html>

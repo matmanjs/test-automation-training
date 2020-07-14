@@ -1,0 +1,6 @@
+{
+  "name": "whistle",
+  "scripts": {
+    "start-prod": "w2 add rules/whistle.prod.js --force"
+  }
+}

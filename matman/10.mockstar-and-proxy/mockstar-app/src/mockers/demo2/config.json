@@ -1,0 +1,10 @@
+{
+  "description": "description for demo2",
+  "route": "/cgi-bin/a/b/demo_cgi2",
+  "defaultModule": "success_type_1",
+  "method": "get",
+  "tags": [
+    "tag1",
+    "tag2"
+  ]
+}
