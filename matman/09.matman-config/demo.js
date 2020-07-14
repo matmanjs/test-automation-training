@@ -11,7 +11,9 @@ module.exports = async () => {
     new BrowserRunner(),
     {},
     {
+      // 自动注入 JQuery
       crawlerInjectJQuery: true,
+      // 开发模式运行
       isDevBuild: true,
     }
   );
