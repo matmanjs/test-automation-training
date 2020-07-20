@@ -11,7 +11,7 @@
 - [04.device-emulation](./04.device-emulation): 设备仿真，定义无头浏览器ua和大小
 - [05.launch-options](./05.launch-options): 浏览器启动参数，定义展现模式，记录器等
 - [06.set-cookie](./06.set-cookie): 设置浏览器 Cookie 的各种方式
-- [07.set-screen-shot](./07.set-screen-shot): 设置浏览器 Cookie 的各种方式
+- [07.set-screen-shot](./07.set-screen-shot): 设置截屏的各种方式
 - [51.e2e-test](./51.e2e-test): 使用 matman 做端对端测试的简单例子
 
 
