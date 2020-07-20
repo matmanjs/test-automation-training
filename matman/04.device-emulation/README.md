@@ -1,4 +1,4 @@
-# 02.device-emulation
+# 04.device-emulation
 
 使用 matman 可以很方便实现设备仿真，即指定无头浏览器的视窗大小。
 
