@@ -1,6 +1,6 @@
-# 01.getting-started
+# 08.result-coverage
 
-简单的 matman 示例。
+对 matman 的运行结果与覆盖率报告进行配置，分别是不同的 API 但是设计的内容较少并且相似，所以我们放到一起进行分析、讲解。
 
 ## 1. 安装
 
@@ -10,53 +10,48 @@ $ npm install
 
 ## 2. 示例说明
 
-我们以打开 https://www.baidu.com 并搜索 `matman` 为例做了一个简单的演示，体验方式：
+### 2.1 demo_coverage.js
 
-```bash
-$ node baidu.js
-```
+设置 `Coverage` 参数
 
-在本示例中，我们利用无头浏览器，对用户的行为进行了模拟操作，包含了三个动作：
+- `tag` 为标签用于区分不同版本
+- `path` 用于指定文件名，需要注意必须指定后缀
 
-- 动作一：开始操作之前，等待页面加载完成
-- 动作二：搜索框中输入 `matman`
-- 动作三：点击搜索按钮
-
-对应的代码如下：
+使用方法（完整代码请查看 [demo_coverage.js](./demo_coverage.js)）：
 
 ```js
-  // 第一步：开始操作之前，等待页面加载完成
-  await pageDriver.addAction('init', async page => {
-    await page.waitFor('#su');
-  });
-
-  // 第二步：搜索输入框输入: matman
-  await pageDriver.addAction('input_key_word', async page => {
-    await page.type('#kw', 'matman');
-  });
-
-  // 第三步：点击搜索按钮，获得搜索结果
-  await pageDriver.addAction('click_to_search', async page => {
-    await page.click('#su');
-    await page.waitFor('#content_left');
-  });
+// 设置 Coverage 参数, tag 为标签用于区分不同版本, path 用于指定文件名, 需要注意必须指定后缀
+await pageDriver.setCoverageConfig({
+  tag: 'mytag',
+  path: 'mypath.json',
+});
 ```
 
-运行上述命令之后，可以观察我们启动了一个浏览器，且按上述三个动作，浏览器进行了"播放式"自动执行。
+体验方式：
 
-运行结束之后，在 `build` 目录下可以看到抓包截图和运行获得的 [数据快照](https://matmanjs.github.io/matman/wiki/basic-concepts/data-snapshot.html).
-
-```text
-.
-├── matman_result_output
-│   └── baidu_js.json
-└── screenshot_output
-    └── baidu_js
-        ├── baidu_js_1.png
-        ├── baidu_js_2.png
-        └── baidu_js_3.png
+```bash
+$ node demo_coverage.js
 ```
 
-三个动作产生了三份数据快照，接下来就可以针对这些数据快照做校验，这个过程，也就是端对端测试的过程了。
+### 2.1 demo_result.js
 
-![](../../.asset/img/baidu-search.png)
+设置产物参数
+
+- `tag` 为标签用于区分不同版本
+- `path` 用于指定文件名，需要注意必须指定后缀
+
+使用方法（完整代码请查看 [demo_result.js](./demo_result.js)）：
+
+```js
+// 设置产物参数, tag 为标签用于区分不同版本, path 用于指定文件名, 需要注意必须指定后缀
+await pageDriver.setMatmanResultConfig({
+  tag: 'mytag',
+  path: 'mypath.json',
+});
+```
+
+体验方式：
+
+```bash
+$ node demo_result.js
+```
