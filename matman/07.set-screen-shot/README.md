@@ -1,6 +1,6 @@
-# 01.getting-started
+# 07.set-screen-shot
 
-简单的 matman 示例。
+matman 支持对网页进行截图，具体的设置方法如下。
 
 ## 1. 安装
 
@@ -10,53 +10,69 @@ $ npm install
 
 ## 2. 示例说明
 
-我们以打开 https://www.baidu.com 并搜索 `matman` 为例做了一个简单的演示，体验方式：
+### 2.1 demo_bool.js
 
-```bash
-$ node baidu.js
-```
+matman 支持进行页面截图，需要使用 `setScreenshotConfig` 进行开启。
 
-在本示例中，我们利用无头浏览器，对用户的行为进行了模拟操作，包含了三个动作：
-
-- 动作一：开始操作之前，等待页面加载完成
-- 动作二：搜索框中输入 `matman`
-- 动作三：点击搜索按钮
-
-对应的代码如下：
+使用方法（完整代码请查看 [demo_bool.js](./demo_bool.js)）：
 
 ```js
-  // 第一步：开始操作之前，等待页面加载完成
-  await pageDriver.addAction('init', async page => {
-    await page.waitFor('#su');
-  });
-
-  // 第二步：搜索输入框输入: matman
-  await pageDriver.addAction('input_key_word', async page => {
-    await page.type('#kw', 'matman');
-  });
-
-  // 第三步：点击搜索按钮，获得搜索结果
-  await pageDriver.addAction('click_to_search', async page => {
-    await page.click('#su');
-    await page.waitFor('#content_left');
-  });
+// 设置截屏
+// 设置为 true 开启截屏
+await pageDriver.setScreenshotConfig(true);
 ```
 
-运行上述命令之后，可以观察我们启动了一个浏览器，且按上述三个动作，浏览器进行了"播放式"自动执行。
+体验方式：
 
-运行结束之后，在 `build` 目录下可以看到抓包截图和运行获得的 [数据快照](https://matmanjs.github.io/matman/wiki/basic-concepts/data-snapshot.html).
-
-```text
-.
-├── matman_result_output
-│   └── baidu_js.json
-└── screenshot_output
-    └── baidu_js
-        ├── baidu_js_1.png
-        ├── baidu_js_2.png
-        └── baidu_js_3.png
+```bash
+$ node demo_bool.js
 ```
 
-三个动作产生了三份数据快照，接下来就可以针对这些数据快照做校验，这个过程，也就是端对端测试的过程了。
+### 2.2 demo_string.js
 
-![](../../.asset/img/baidu-search.png)
+matman 支持对截图的文件名进行自定义，需要传入文件的完整名称（包括 `后缀`，且目前仅支持 `PNG`）。
+
+使用方法（完整代码请查看 [demo_string.js](./demo_string.js)）：
+
+```js
+// 设置截屏
+// 当传入的参数为字符串时, 指定的为生成文件的文件名, 需要注意的是需要指定后缀, 且必须为 PNG
+await pageDriver.setScreenshotConfig('screenShot.png');
+```
+
+体验方式：
+
+```bash
+$ node demo_string.js
+```
+
+### 2.1 demo_object.js
+
+matman 支持用对象设置具体的截屏参数，可以使用 `clip` 属性指定截屏的区域，这里我们需要注意的是 `clip` 与 `fullPage` 不能同时设置。
+
+使用方法（完整代码请查看 [demo_object.js](./demo_object.js)）：
+
+```js
+// 设置截屏
+// clip 属性指定截图的区域
+// fullPage 属性指定是否截取全屏, 还是截取可视区域
+// 需要注意的是 clip 和 fullPage 不能同时设置
+// path 指定的为生成文件的文件名, 需要注意的是需要指定后缀, 且必须为 PNG
+await pageDriver.setScreenshotConfig({
+  path: 'temp.png',
+  clip: {
+    x: 200,
+    y: 200,
+    width: 800,
+    height: 500,
+  },
+  fullPage: false,
+});
+```
+
+体验方式：
+
+```bash
+$ node demo_object.js
+```
+
