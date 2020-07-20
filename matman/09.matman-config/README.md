@@ -1,6 +1,6 @@
-# 01.getting-started
+# 09.matman-config
 
-简单的 matman 示例。
+matman 配置项目解释。
 
 ## 1. 安装
 
@@ -10,53 +10,47 @@ $ npm install
 
 ## 2. 示例说明
 
-我们以打开 https://www.baidu.com 并搜索 `matman` 为例做了一个简单的演示，体验方式：
+> 具体的配置可以 [参考](https://matmanjs.github.io/matman/api/matman-config.html)
 
-```bash
-$ node baidu.js
-```
+### 2.1 在 case 中配置
 
-在本示例中，我们利用无头浏览器，对用户的行为进行了模拟操作，包含了三个动作：
+> 我们不推荐使用这种方式
 
-- 动作一：开始操作之前，等待页面加载完成
-- 动作二：搜索框中输入 `matman`
-- 动作三：点击搜索按钮
+在 launch 函数中的第三个参数中传入，这里配置的优先级最高，将覆盖配置文件中的配置。
 
-对应的代码如下：
+样例如下（具体可以参考 [demo.js](./demo.js)）：
 
 ```js
-  // 第一步：开始操作之前，等待页面加载完成
-  await pageDriver.addAction('init', async page => {
-    await page.waitFor('#su');
-  });
-
-  // 第二步：搜索输入框输入: matman
-  await pageDriver.addAction('input_key_word', async page => {
-    await page.type('#kw', 'matman');
-  });
-
-  // 第三步：点击搜索按钮，获得搜索结果
-  await pageDriver.addAction('click_to_search', async page => {
-    await page.click('#su');
-    await page.waitFor('#content_left');
-  });
+// 创建 PageDriver 对象，使用它可以实现对浏览器页面的控制
+// 我们可以在 lunch 的第三个参数中传递 matman 的配置
+// 不过一般不推荐你这样做
+// 请在项目根目录中新建 matman.config.js 文件并在其中写入配置
+// 更多配置说明, 请参考 https://matmanjs.github.io/matman/api/matman-config.html
+const pageDriver = matman.launch(
+  new BrowserRunner(),
+  {},
+  {
+    // 自动注入 JQuery
+    crawlerInjectJQuery: true,
+    // 开发模式运行
+    isDevBuild: true,
+  }
+);
 ```
 
-运行上述命令之后，可以观察我们启动了一个浏览器，且按上述三个动作，浏览器进行了"播放式"自动执行。
+### 2.2 matman 配置文件（matman.config.js）
 
-运行结束之后，在 `build` 目录下可以看到抓包截图和运行获得的 [数据快照](https://matmanjs.github.io/matman/wiki/basic-concepts/data-snapshot.html).
+> 推荐在根目录下新建 `matman.config.js` 进行全局的配置
 
-```text
-.
-├── matman_result_output
-│   └── baidu_js.json
-└── screenshot_output
-    └── baidu_js
-        ├── baidu_js_1.png
-        ├── baidu_js_2.png
-        └── baidu_js_3.png
+我们再配置文件中以 CommonJS 的形式，默认暴露一个对象。
+
+样例如下（具体可以参考 [matman.config.js](./matman.config.js)）：
+
+```js
+// 更多配置说明，请参考 https://matmanjs.github.io/matman/api/matman-config.html
+module.exports = {
+  rootPath: __dirname,
+  crawlerInjectJQuery: true,
+};
 ```
 
-三个动作产生了三份数据快照，接下来就可以针对这些数据快照做校验，这个过程，也就是端对端测试的过程了。
-
-![](../../.asset/img/baidu-search.png)

@@ -13,6 +13,8 @@
 - [06.set-cookie](./06.set-cookie): 设置浏览器 Cookie 的各种方式
 - [07.set-screen-shot](./07.set-screen-shot): 设置截屏的各种方式
 - [08.result-coverage](./08.result-coverage): 设置截屏的各种方式
+- [09.matman-config](./09.matman-config): matman 的配置项目
+- [10.mockstar-and-proxy](./10.mockstar-and-proxy): matman 设置代理与 mockstar 指定返回
 - [51.e2e-test](./51.e2e-test): 使用 matman 做端对端测试的简单例子
 
 
