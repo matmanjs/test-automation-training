@@ -1,6 +1,6 @@
-# 01.getting-started
+# 06.set-cookie
 
-简单的 matman 示例。
+matman 中针对 `cookie` 设置的几种方式。
 
 ## 1. 安装
 
@@ -10,53 +10,65 @@ $ npm install
 
 ## 2. 示例说明
 
-我们以打开 https://www.baidu.com 并搜索 `matman` 为例做了一个简单的演示，体验方式：
+### 2.1 demo_string.js
 
-```bash
-$ node baidu.js
-```
+matman 支持使用字符串设置浏览器的 `Cookie`，需要传入符合 Cookie 规范的字符串。
 
-在本示例中，我们利用无头浏览器，对用户的行为进行了模拟操作，包含了三个动作：
-
-- 动作一：开始操作之前，等待页面加载完成
-- 动作二：搜索框中输入 `matman`
-- 动作三：点击搜索按钮
-
-对应的代码如下：
+使用方法（完整代码请查看 [demo_string.js](./demo_string.js)）：
 
 ```js
-  // 第一步：开始操作之前，等待页面加载完成
-  await pageDriver.addAction('init', async page => {
-    await page.waitFor('#su');
-  });
-
-  // 第二步：搜索输入框输入: matman
-  await pageDriver.addAction('input_key_word', async page => {
-    await page.type('#kw', 'matman');
-  });
-
-  // 第三步：点击搜索按钮，获得搜索结果
-  await pageDriver.addAction('click_to_search', async page => {
-    await page.click('#su');
-    await page.waitFor('#content_left');
-  });
+// 设置 cookie
+await pageDriver.setCookieConfig('mykey1=myvalue1; mykey2=myvalue2');
 ```
 
-运行上述命令之后，可以观察我们启动了一个浏览器，且按上述三个动作，浏览器进行了"播放式"自动执行。
+体验方式：
 
-运行结束之后，在 `build` 目录下可以看到抓包截图和运行获得的 [数据快照](https://matmanjs.github.io/matman/wiki/basic-concepts/data-snapshot.html).
-
-```text
-.
-├── matman_result_output
-│   └── baidu_js.json
-└── screenshot_output
-    └── baidu_js
-        ├── baidu_js_1.png
-        ├── baidu_js_2.png
-        └── baidu_js_3.png
+```bash
+$ node demo_string.js
 ```
 
-三个动作产生了三份数据快照，接下来就可以针对这些数据快照做校验，这个过程，也就是端对端测试的过程了。
+### 2.2 demo_object.js
 
-![](../../.asset/img/baidu-search.png)
+matman 支持使用 `Object` 设置浏览器的 `Cookie`，其中 `key` 为 Cookie 键，`value` 为 Cookie 的值。
+
+使用方法（完整代码请查看 [demo_object.js](./demo_object.js)）：
+
+```js
+// 设置 cookie
+await pageDriver.setCookieConfig({ mykey1: 'myvalue1', mykey2: 'myvalue2' });
+```
+
+体验方式：
+
+```bash
+$ node demo_object.js
+```
+
+### 2.3 demo_array.js
+
+matman 支持使用 `Array` 设置浏览器的 `Cookie`，可以对 Cookie 的过期时间，安全配置进行设置，具体的配置项 [参考](https://zhaoqize.github.io/puppeteer-api-zh_CN/#?product=Puppeteer&version=v3.1.0&show=api-pagecookiesurls)。
+
+使用方法（完整代码请查看 [demo_array.js](./demo_array.js)）：
+
+```js
+// 设置 cookie
+// 还支持 domain expires 等配置, 请参考 https://zhaoqize.github.io/puppeteer-api-zh_CN/#?product=Puppeteer&version=v3.1.0&show=api-pagecookiesurls
+await pageDriver.setCookieConfig([
+  {
+    name: 'mykey1',
+    value: 'myvalue1',
+  },
+  {
+    name: 'mykey2',
+    value: 'myvalue2',
+    httpOnly: true,
+  },
+]);
+```
+
+体验方式：
+
+```bash
+$ node demo_array.js
+```
+
