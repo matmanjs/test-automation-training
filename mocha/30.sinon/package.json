@@ -1,0 +1,22 @@
+{
+  "name": "30.sinon",
+  "version": "1.0.0",
+  "description": "mocha-sinon-demo",
+  "main": "index.js",
+  "directories": {
+    "test": ""
+  },
+  "scripts": {
+    "test": "mocha --require @babel/register --recursive"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.10.5",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.1",
+    "sinon": "^9.0.3"
+  }
+}
