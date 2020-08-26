@@ -1,0 +1,16 @@
+{
+    "all": true,
+    "include": [
+        "src/**/*.js"
+    ],
+    "exclude": [
+        "src/**/node/**/*.js"
+    ],
+    "reporter":[
+         "text-summary",
+         "html",
+         "lcovonly"
+    ],
+    "ignore-class-method": ["render"],
+    "report-dir": "./coverage"
+}
