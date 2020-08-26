@@ -1,0 +1,17 @@
+{
+  "name": "02.configuring-nyc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha test",
+    "coverage": "npx nyc npm run test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.2",
+    "nyc": "^15.1.0"
+  }
+}
