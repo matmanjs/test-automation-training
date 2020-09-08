@@ -1,0 +1,56 @@
+{
+	"yyx990803": {
+		"total_count": 1,
+		"incomplete_results": false,
+		"items": [
+		  {
+			"login": "yyx990803",
+			"id": 499550,
+			"node_id": "MDQ6VXNlcjQ5OTU1MA==",
+			"avatar_url": "https://avatars1.githubusercontent.com/u/499550?v=4",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/yyx990803",
+			"html_url": "https://github.com/yyx990803",
+			"followers_url": "https://api.github.com/users/yyx990803/followers",
+			"following_url": "https://api.github.com/users/yyx990803/following{/other_user}",
+			"gists_url": "https://api.github.com/users/yyx990803/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/yyx990803/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/yyx990803/subscriptions",
+			"organizations_url": "https://api.github.com/users/yyx990803/orgs",
+			"repos_url": "https://api.github.com/users/yyx990803/repos",
+			"events_url": "https://api.github.com/users/yyx990803/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/yyx990803/received_events",
+			"type": "User",
+			"site_admin": false,
+			"score": 1.0
+		  }
+		]
+	},
+	"Jinjiang": {
+		"total_count": 55,
+		"incomplete_results": false,
+		"items": [
+		  {
+			"login": "Jinjiang",
+			"id": 206848,
+			"node_id": "MDQ6VXNlcjIwNjg0OA==",
+			"avatar_url": "https://avatars1.githubusercontent.com/u/206848?v=4",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/Jinjiang",
+			"html_url": "https://github.com/Jinjiang",
+			"followers_url": "https://api.github.com/users/Jinjiang/followers",
+			"following_url": "https://api.github.com/users/Jinjiang/following{/other_user}",
+			"gists_url": "https://api.github.com/users/Jinjiang/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/Jinjiang/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/Jinjiang/subscriptions",
+			"organizations_url": "https://api.github.com/users/Jinjiang/orgs",
+			"repos_url": "https://api.github.com/users/Jinjiang/repos",
+			"events_url": "https://api.github.com/users/Jinjiang/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/Jinjiang/received_events",
+			"type": "User",
+			"site_admin": false,
+			"score": 1.0
+		  }
+		]
+	}
+}

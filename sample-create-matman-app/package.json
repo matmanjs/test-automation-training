@@ -1,0 +1,32 @@
+{
+  "name": "sample-create-matman-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.20"
+  },
+  "scripts": {
+    "build-dev": "webpack --config webpack.dev.config.js",
+    "build-prod": "webpack --config webpack.prod.config.js",
+    "use-whistle-dev": "cd DevOps/whistle && npm run use-dev",
+    "use-whistle-prod": "cd DevOps/whistle && npm run use-prod",
+    "test": "npm run test:e2e",
+    "test:e2e": "node test/run-e2e-test.js",
+    "test:e2e:show": "cross-env SHOW_BROWSER=1 npm run test:e2e",
+    "test:e2e:direct": "mocha test/e2e",
+    "test:e2e:bootstrap": "node test/bootstrap-sut.js",
+    "test:e2e:bootstrap:dev": "node test/bootstrap-sut-dev.js"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "html-webpack-plugin": "^4.3.0",
+    "istanbul-instrumenter-loader": "^3.0.1",
+    "matman-e2e-test": "^1.1.0",
+    "mocha": "^8.1.3",
+    "mochawesome": "^6.1.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
