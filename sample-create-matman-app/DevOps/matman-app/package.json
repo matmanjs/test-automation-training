@@ -1,0 +1,14 @@
+{
+  "name": "matman-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.19",
+    "matman": "^6.0.17",
+    "matman-runner-puppeteer": "^6.0.17",
+    "web-crawl-util": "^1.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
+  }
+}
