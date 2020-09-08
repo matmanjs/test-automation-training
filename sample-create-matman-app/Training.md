@@ -52,9 +52,9 @@ $ cd DevOps/mockstar-app
 $ npm run start
 ```
 
-本地打开http://127.0.0.1:9527/会看到目前所mock的接口数据；
+本地打开 [http://127.0.0.1:9527/](http://127.0.0.1:9527/)  会看到目前所mock的接口数据；
 
-此时本地打开http://www.sogou.com/sogou.html会看到如下页面：
+此时本地打开 [http://www.sogou.com/ ](http://www.sogou.com/ ) sogou.html会看到如下页面：
 
 ![](../.asset/img/sogou.png)
 
@@ -225,9 +225,15 @@ describe('端对端测试样例', function() {
 }) 
 ```
 
-### 8. 正常运行即可获取结果
+### 8. 运行命令获取结果
 
 ```bash
 $ npm run e2e
 ```
 
+如果你本地环境已经搭建完毕(mockstar已启动，whistle代理配置已配好)，那么可以直接去运行：
+
+```bash
+$ npm run test:e2e:direct
+```
+获取当前测试用例的执行结果

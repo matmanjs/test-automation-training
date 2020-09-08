@@ -16,12 +16,12 @@ module.exports = async pageDriverOpts => {
     await page.waitFor('#main');
     await page.waitFor(1000);
   });
-
+  // 触发按钮点击请求新的数据
   await pageDriver.addAction('click to change', async page => {
     await page.click('#click');
     await page.waitFor(1000);
   });
-
+ // 再次触发按钮点击请求新的数据
   await pageDriver.addAction('click to change again', async page => {
     await page.click('#click');
     await page.waitFor(1000);

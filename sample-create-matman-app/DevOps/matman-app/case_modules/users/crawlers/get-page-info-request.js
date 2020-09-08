@@ -6,7 +6,7 @@ module.exports = () => {
     remarks: 'Got data by npm package: web-crawl-util'
   };
 };
-
+// 获取页面数据
 function getGithubInfo() {
   const parentSelector = '.container';
   const result = {
