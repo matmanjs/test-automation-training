@@ -1,0 +1,11 @@
+{
+  "all": true,
+  "include": ["src/**/*.ts"],
+  "exclude": [
+    "src/**/node/**/*.ts",
+    "src/**/modules/**/*.ts",
+    "src/**/assets/**/*.ts"
+  ],
+  "reporter": ["text-summary", "html", "lcovonly"],
+  "report-dir": ".dwt_output/coverage"
+}
