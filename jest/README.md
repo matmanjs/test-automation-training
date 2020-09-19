@@ -14,3 +14,8 @@
 - 所有示例代码均已在 `iMac` 和 `Windows 10` 进行了验证，如果您发现有什么问题，欢迎给我们提 [pr](https://github.com/matmanjs/test-automation-training/pulls) 或 [issue](https://github.com/matmanjs/test-automation-training/issues)
 
 ## 2. 目录
+
+- [01.getting-started](./01.getting-started): 最简单的示例，适合入门
+- [02.jest-test-directory](./02.jest-test-directory): 测试用例放置的目录
+- [03.command-line-argument](./03.command-line-argument): 命令参数
+- [04.configuring-jest](./04.configuring-jest): jest 的配置文件

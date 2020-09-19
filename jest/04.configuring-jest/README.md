@@ -29,7 +29,7 @@ The following questions will help Jest to create a suitable configuration for yo
 需要注意的是：
 
 - 生成 `jest.config.js` 文件之后，你可以按照你的需求，参考 [Configuring Jest](https://jestjs.io/docs/en/configuration) 来修改配置
-- 如果你的 Jest 配置文件名字做了修改，也可以通过 [--config=<path>](https://jestjs.io/docs/en/cli#--configpath) 指定你的 Jest 配置文件
+- 如果你的 Jest 配置文件名字做了修改，也可以通过 [--config=\<path\>](https://jestjs.io/docs/en/cli#--configpath) 指定你的 Jest 配置文件
 
 ## 1. 安装
 
