@@ -1,0 +1,11 @@
+{
+  "name": "02.jest-test-directory",
+  "private": false,
+  "scripts": {
+    "test": "jest",
+    "test-other-folder": "jest test/"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
