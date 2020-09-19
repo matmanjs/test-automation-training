@@ -1,5 +1,5 @@
 {
-  "name": "03.command-line-argument",
+  "name": "04.configuring-jest",
   "private": true,
   "scripts": {
     "test": "jest --reporters=default --reporters=jest-html-reporters --collectCoverage"

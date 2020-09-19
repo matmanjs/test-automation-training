@@ -1,6 +1,6 @@
 {
   "name": "01.getting-started",
-  "private": false,
+  "private": true,
   "dependencies": {
     "matman": "^6.0.5",
     "matman-runner-puppeteer": "^6.0.5"

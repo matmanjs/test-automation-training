@@ -1,6 +1,6 @@
 {
   "name": "02.mocha-test-directory",
-  "private": false,
+  "private": true,
   "scripts": {
     "test": "mocha --recursive",
     "test-other-folder": "mocha test-other-folder --recursive",

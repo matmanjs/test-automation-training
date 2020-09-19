@@ -1,6 +1,6 @@
 {
   "name": "01.getting-started",
-  "private": false,
+  "private": true,
   "scripts": {
     "test": "mocha *.test.js",
     "test-npx": "npx mocha *.test.js",

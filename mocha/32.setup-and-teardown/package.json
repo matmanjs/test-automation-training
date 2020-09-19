@@ -1,6 +1,6 @@
 {
   "name": "32.setup-and-teardown",
-  "private": false,
+  "private": true,
   "scripts": {
     "test": "mocha --file ./test-setup.js --recursive",
     "test-hooks": "mocha --require ./test-hooks.js --recursive"

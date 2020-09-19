@@ -1,6 +1,6 @@
 {
   "name": "01.getting-started",
-  "private": false,
+  "private": true,
   "scripts": {
     "test": "jest",
     "test-another-way": "jest *.test.js"

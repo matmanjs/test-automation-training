@@ -1,6 +1,6 @@
 {
   "name": "51.e2e-test",
-  "private": false,
+  "private": true,
   "scripts": {
     "test": "mocha",
     "test:show": "cross-env SHOW_BROWSER=1 npm run test"

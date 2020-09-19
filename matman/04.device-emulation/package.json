@@ -1,6 +1,6 @@
 {
   "name": "04.device-emulation",
-  "private": false,
+  "private": true,
   "dependencies": {
     "matman": "^6.0.6",
     "matman-runner-puppeteer": "^6.0.6"

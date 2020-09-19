@@ -1,6 +1,6 @@
 {
   "name": "02.individual-crawler-script",
-  "private": false,
+  "private": true,
   "dependencies": {
     "lodash": "^4.17.19",
     "matman": "^6.0.5",
