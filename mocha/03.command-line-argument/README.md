@@ -4,7 +4,6 @@ mocha 提供了很多的命令： https://mochajs.org/#command-line-usage ，可
 
 - [COMMAND-LINE USAGE](https://mochajs.org/#command-line-usage)
 
-
 ## 1. 安装
 
 ```bash
@@ -24,7 +23,7 @@ $ npx mocha --recursive --reporter mochawesome --reporter-options reportDir=.tes
 ```json
 {
   "scripts": {
-    "test": "npx mocha --recursive --reporter mochawesome --reporter-options reportDir=.test_output"
+    "test": "mocha --recursive --reporter mochawesome --reporter-options reportDir=.test_output"
   }
 }
 ```

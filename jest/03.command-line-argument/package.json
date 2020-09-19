@@ -1,0 +1,13 @@
+{
+  "name": "03.command-line-argument",
+  "private": false,
+  "scripts": {
+    "test": "jest --reporters=default --reporters=jest-html-reporters --collectCoverage"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
+  },
+  "dependencies": {
+    "jest-html-reporters": "^2.0.4"
+  }
+}
