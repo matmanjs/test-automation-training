@@ -1,0 +1,11 @@
+{
+  "name": "01.getting-started",
+  "private": false,
+  "scripts": {
+    "test": "jest",
+    "test-another-way": "jest *.test.js"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
