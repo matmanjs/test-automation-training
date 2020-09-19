@@ -2,7 +2,7 @@
   "name": "04.configuring-jest",
   "private": true,
   "scripts": {
-    "test": "jest --reporters=default --reporters=jest-html-reporters --collectCoverage"
+    "test": "jest"
   },
   "devDependencies": {
     "jest": "^26.4.2"
