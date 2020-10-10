@@ -5,9 +5,6 @@
     <div class="main-wrapper">
       <Banner />
       <AdvantageOne />
-      <AdvantageTwo />
-      <AdvantageThree />
-      <AdvantageFour />
       <Community />
     </div>
 
@@ -19,9 +16,6 @@
 import Navbar from './Navbar';
 import Banner from './page-home/Banner';
 import AdvantageOne from './page-home/AdvantageOne';
-import AdvantageTwo from './page-home/AdvantageTwo';
-import AdvantageThree from './page-home/AdvantageThree';
-import AdvantageFour from './page-home/AdvantageFour';
 import Community from './page-home/Community';
 import Links from './Links';
 import Copyright from './Copyright';
@@ -36,9 +30,6 @@ export default {
     Copyright,
     Footer,
     AdvantageOne,
-    AdvantageTwo,
-    AdvantageThree,
-    AdvantageFour,
   },
 };
 </script>

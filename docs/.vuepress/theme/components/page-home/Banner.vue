@@ -2,8 +2,8 @@
   <div class="banner">
     <div class="container">
       <img class="logo" src="../../images/logo.png">
-      <h1 class="title">matman.js</h1>
-      <p class="subtitle">Web 端对端测试（E2E/UI Testing）框架 by JavaScript</p>
+      <h1 class="title">Test Automation Training</h1>
+      <p class="subtitle">web 自动化测试指导手册</p>
       <div class="get-started">
         <a class="button" href="./docs/getting-started">快速开始 →</a>
       </div>
