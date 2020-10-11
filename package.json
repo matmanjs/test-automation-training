@@ -1,0 +1,24 @@
+{
+  "name": "test-automation-training",
+  "private": false,
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "docs:deploy": "npm run docs:build && gh-pages -d docs-dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matmanjs/test-automation-training.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matmanjs/test-automation-training/issues"
+  },
+  "homepage": "https://github.com/matmanjs/test-automation-training#readme",
+  "devDependencies": {
+    "gh-pages": "^3.1.0",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.2",
+    "vuepress": "^1.6.0"
+  }
+}
