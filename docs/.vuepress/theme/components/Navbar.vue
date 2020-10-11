@@ -2,7 +2,7 @@
   <header :style="styles.navbar">
     <nav>
       <router-link :to="localePath" class="logo-wrapper">
-        <img :src="styles.logo" :style="styles.logoStyle" alt="logo" />
+        <span class="name">Test Automation Training</span>
       </router-link>
       <ul class="navs">
         <li class="nav" v-for="(nav, index) in navs" :key="index">
@@ -145,18 +145,10 @@ nav {
 .logo-wrapper {
   display: flex;
 
-  .logo-desc {
+  .name {
     color: #4d4d4d;
     line-height: 50px;
-    padding-left: 20px;
-    font-size: 32px;
-  }
-
-  .logo-desc-white {
-    color: #fff;
-    line-height: 50px;
-    padding-left: 20px;
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 

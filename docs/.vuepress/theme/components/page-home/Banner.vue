@@ -5,25 +5,25 @@
       <h1 class="title">Test Automation Training</h1>
       <p class="subtitle">web 自动化测试指导手册</p>
       <div class="get-started">
-        <a class="button" href="./docs/getting-started">快速开始 →</a>
+        <a class="button" href="./about/">快速开始 →</a>
       </div>
       <ul class="github">
         <li class="star">
           <div class="button star--button">
             <i class="icon star--icon"></i>
-            <a href="https://github.com/matmanjs/matman" target="_blank">Star</a>
+            <a href="https://github.com/matmanjs/test-automation-training" target="_blank">Star</a>
           </div>
         </li>
         <li class="fork">
           <div class="button fork--button">
             <i class="icon fork--icon"></i>
-            <a href="https://github.com/matmanjs/matman" target="_blank">Fork</a>
+            <a href="https://github.com/matmanjs/test-automation-training" target="_blank">Fork</a>
           </div>
         </li>
         <li class="issue">
           <div class="button issue--button">
             <i class="icon issue--icon"></i>
-            <a href="https://github.com/matmanjs/matman/issues" target="_blank">Issues</a>
+            <a href="https://github.com/matmanjs/test-automation-training/issues" target="_blank">Issues</a>
           </div>
         </li>
       </ul>
