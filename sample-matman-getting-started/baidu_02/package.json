@@ -8,13 +8,13 @@
     "test:show": "cross-env SHOW_BROWSER=1 npm run test"
   },
   "dependencies": {
-    "matman": "^6.0.5",
-    "matman-runner-puppeteer": "^6.0.5"
+    "matman": "^6.0.17",
+    "matman-runner-puppeteer": "^6.0.17"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "cross-env": "^7.0.2",
-    "matman-cli": "^6.0.5",
+    "matman-cli": "^6.0.17",
     "mocha": "^8.0.1"
   }
 }

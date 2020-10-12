@@ -32,7 +32,7 @@ describe('百度首页：常规检查', function () {
 
     it('userAgent应该正确', function () {
       expect(data.userAgent).to.equal(
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36 mycustomua'
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36 mycustomua',
       );
     });
   });
