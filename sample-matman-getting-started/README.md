@@ -1,8 +1,8 @@
 # matman-demo-getting-started
 
-使用 [matman 框架](https://github.com/matmanjs/matman)写 web 端对端测试的例子，请配合 [快速入门](https://matmanjs.github.io/matman/wiki/getting-started/) 一文使用。
+使用 [matman 框架](https://github.com/matmanjs/matman)写 web 端对端测试的例子，请配合 [使用指南](https://matmanjs.github.io/matman/docs/develop/baidu_01.html) 一文使用。
 
-> 注意，本项目适合入门，而更高阶的用法，则请移步 https://github.com/matmanjs/matman-demo 项目。
+> 注意，本项目适合入门，而更高阶的用法，则请移步 [sample-matman-react-mocha](../sample-matman-react-mocha) 项目。
 
 
 ## 项目说明
