@@ -38,7 +38,11 @@ const DEVICE = {
  * @param {Object} pageDriverOpts PageDriver 额外参数
  * @param {Object} [queryDataMap] mock server 额外参数
  */
-async function createPageDriver(caseModuleFilePath, pageDriverOpts, queryDataMap) {
+async function createPageDriver(
+  caseModuleFilePath,
+  pageDriverOpts,
+  queryDataMap,
+) {
   // 创建 PageDriver，API 详见 https://matmanjs.github.io/matman/api/
   const pageDriver = await matman.launch(
     new BrowserRunner(),

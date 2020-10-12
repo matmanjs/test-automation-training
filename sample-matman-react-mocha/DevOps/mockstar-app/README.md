@@ -35,4 +35,4 @@ $ npm run stop
 
 ## 2. 反馈
 
-更多文档请阅读 [官方指南](https://mockstarjs.github.io/mockstar/) ，欢迎给我们 [提 issue](https://github.com/mockstarjs/mockstar/issues) 和 [star](https://github.com/mockstarjs/mockstar) 。
+更多文档请阅读 [官方指南](https://mockstarjs.github.io/mockstar/) ，欢迎给我们 [提issue](https://github.com/mockstarjs/mockstar/issues) 和 [star](https://github.com/mockstarjs/mockstar) 。
