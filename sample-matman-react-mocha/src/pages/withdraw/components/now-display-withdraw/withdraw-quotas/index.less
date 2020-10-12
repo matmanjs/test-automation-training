@@ -1,0 +1,63 @@
+.display-withdraw-quotas {
+  background: #fff;
+  position: relative;
+
+  .title {
+    display: block;
+    font-size: 14px;
+    padding: 14px 16px 0 16px;
+  }
+
+  .selection {
+    padding: 13px 16px;
+
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+
+    -webkit-box-pack: justify;
+
+    -webkit-box-align: center;
+
+    -webkit-align-items: center;
+    align-items: center;
+
+    -webkit-flex-flow: row;
+    flex-flow: row;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    .item {
+      display: inline-block;
+      font-size: 14px;
+      width: 98px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 4px;
+      color: #bbb;
+      border: 1px solid #bbb;
+
+      &.available {
+        color: #05d380;
+        border: 1px solid #05d380;
+      }
+
+      &.active {
+        color: #ffffff;
+        background: #05d380;
+        border: 1px solid #05d380;
+      }
+    }
+  }
+
+  .tips-taxed {
+    font-size: 11px;
+    color: #777777;
+    padding: 0 16px 12px;
+  }
+}

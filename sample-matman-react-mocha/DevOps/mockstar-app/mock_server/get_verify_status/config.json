@@ -1,0 +1,6 @@
+{
+  "description": "拉取认证状态",
+  "route": "/cgi-bin/a/b/get_verify_status",
+  "defaultModule": "success_all_ok",
+  "tags": ["withdraw 提现页", "matman"]
+}

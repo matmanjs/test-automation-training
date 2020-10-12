@@ -1,0 +1,6 @@
+{
+  "description": "申请提现",
+  "route": "/cgi-bin/a/b/withdraw_money",
+  "defaultModule": "success",
+  "tags": ["withdraw 提现页", "matman"]
+}

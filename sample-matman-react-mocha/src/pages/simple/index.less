@@ -1,0 +1,62 @@
+.section {
+  margin-bottom: 10px;
+  padding: 2px 10px;
+}
+
+#anchors {
+  display: flex;
+
+  .use-img {
+    width: 50%;
+    height: 100%;
+  }
+
+  .use-background {
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+#rules {
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 11px;
+  }
+
+  .btn-group {
+    display: flex;
+  }
+
+  .btn {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 16px;
+
+    &.active {
+      background-color: #05d380;
+      color: #fff;
+    }
+
+    &.disable {
+      background-color: #aaa;
+      color: #fff;
+    }
+  }
+}
+
+#tips {
+  .long-word {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 21px;
+    line-height: 21px;
+  }
+}

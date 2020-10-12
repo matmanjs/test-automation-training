@@ -1,0 +1,65 @@
+@import '../../../../../assets/css/mixin.less';
+
+.display-transaction-list {
+  .list-item {
+    height: 60px;
+    border-bottom: solid 0.5px #e6e6e6;
+    display: flex;
+    align-items: center;
+    padding: 0 17px 0 15px;
+
+    .info {
+      flex: 1;
+
+      .flow-info {
+        height: 16px;
+        font-size: 16px;
+        line-height: 16px;
+        max-width: 250px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #000000;
+      }
+
+      .flow-time {
+        margin-top: 8px;
+        height: 14px;
+        line-height: 14px;
+        font-size: 14px;
+        color: #777777;
+      }
+    }
+
+    .dated-icon {
+      width: 47px;
+      height: 47px;
+      background-image: url('./img/dated.png');
+      .backgroundImage();
+    }
+
+    .money {
+      font-size: 24px;
+      color: #000000;
+      text-align: right;
+      width: 72px;
+    }
+
+    .minus {
+      margin-right: 4px;
+    }
+
+    &.dated {
+      .info {
+        .flow-info,
+        .flow-time {
+          color: #bbb;
+        }
+      }
+
+      .money {
+        color: #bbb;
+      }
+    }
+  }
+}

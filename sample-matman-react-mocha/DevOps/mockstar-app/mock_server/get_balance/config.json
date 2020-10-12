@@ -1,0 +1,6 @@
+{
+  "description": "查询余额",
+  "route": "/cgi-bin/a/b/get_balance",
+  "defaultModule": "success_16888",
+  "tags": ["withdraw 提现页", "matman"]
+}

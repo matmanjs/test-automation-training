@@ -1,0 +1,78 @@
+{
+  "name": "matman-demo",
+  "private": true,
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "use-whistle-dev": "cd DevOps/whistle && npm run use-dev",
+    "use-whistle-prod": "cd DevOps/whistle && npm run use-prod",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "npm run coverage",
+    "test:unit:direct": "cross-env BABEL_ENV=test mocha test/unit",
+    "test:e2e": "node test/run-e2e-test.js",
+    "test:e2e:show": "cross-env SHOW_BROWSER=1 npm run test:e2e",
+    "test:e2e:direct": "mocha test/e2e",
+    "test:e2e:bootstrap": "node test/bootstrap-sut.js",
+    "test:e2e:bootstrap:dev": "node test/bootstrap-sut-dev.js",
+    "coverage": "nyc npm run test:unit:direct"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matmanjs/matman-demo.git"
+  },
+  "author": "helinjiang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matmanjs/matman-demo/issues"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "classnames": "^2.2.6",
+    "js-cookie": "^2.2.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.2.0",
+    "cross-env": "^6.0.3",
+    "customize-cra": "^0.4.1",
+    "eslint": "^7.8.1",
+    "eslint-plugin-react": "^7.20.6",
+    "fs-extra": "^9.0.1",
+    "istanbul-instrumenter-loader": "^3.0.1",
+    "less": "^3.12.2",
+    "less-loader": "^5.0.0",
+    "matman-e2e-test": "^1.1.1",
+    "mocha": "^8.1.3",
+    "mochawesome": "^6.1.1",
+    "nyc": "^15.1.0",
+    "prettier": "^2.1.1",
+    "react-app-rewired": "^2.1.5",
+    "react-scripts": "^3.4.3"
+  }
+}
