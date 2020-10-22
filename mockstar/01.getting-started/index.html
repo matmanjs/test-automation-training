@@ -21,8 +21,9 @@
     </div>
 
     <div class="well" id="demo2">
-        <h1>返回指定数据：方式一</h1>
-        <p>在该接口请求url中追加 <code>_ms_target=xxxx</code> ，例如要返回 <code>success_js_module</code> 的数据，则请求接口修改为 <code>http://127.0.0.1:9527/cgi-bin/a/b/demo_cgi?_ms_target=success_js_module</code></p>
+        <h1>返回指定数据：借助 url query</h1>
+        <p>如果是 <code>GET</code> 请求，在该接口请求url中追加 <code>_ms_target=xxxx</code> ，例如要返回 <code>success_js_module</code> 的数据，则请求接口修改为 <code>http://127.0.0.1:9527/cgi-bin/a/b/demo_cgi?_ms_target=success_js_module</code>；</p>
+        <p>如果是 <code>POST</code> 请求，则将其加入到 post body 中；</p>
         <button type="button" class="btn btn-primary debug">返回：debug</button>
         <button type="button" class="btn btn-primary error_100000">返回：error_100000</button>
         <button type="button" class="btn btn-primary success_js_module">返回：success_js_module</button>
@@ -30,8 +31,8 @@
     </div>
 
     <div class="well" id="demo3">
-        <h1>返回指定数据：方式二</h1>
-        <p>有时候修改 url 不方便，也可以通过</p>
+        <h1>返回指定数据：借助 headers</h1>
+        <p>有时候修改 url 不方便，也可以通过在 <code>headers</code> 中传入 <code>x-mockstar-query</code> 。</p>
 
         <button type="button" class="btn btn-primary debug">返回：debug</button>
         <button type="button" class="btn btn-primary error_100000">返回：error_100000</button>
@@ -43,7 +44,7 @@
 
     <div class="logs">
         <p>接口请求：</p>
-        <textarea class="form-control" rows="5" id="req-output"></textarea>
+        <textarea class="form-control" rows="10" id="req-output"></textarea>
 
         <p><br></p>
         <p>接口响应：</p>

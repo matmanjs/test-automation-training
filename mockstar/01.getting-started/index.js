@@ -32,22 +32,38 @@ function bindClickEvent() {
 
   bindDemoClick('#demo3 .btn.debug', 'http://127.0.0.1:9527/cgi-bin/a/b/demo_cgi', {
     headers: {
-      'x-mockstar-query': encodeURIComponent('[{"_ms_name":"demo_cgi","_ms_target":"debug","_ms_disable":false}]'),
+      'x-mockstar-query': encodeURIComponent(JSON.stringify([{
+        '_ms_name': 'demo_cgi',
+        '_ms_target': 'debug',
+        '_ms_disable': false,
+      }])),
     },
   });
   bindDemoClick('#demo3 .btn.error_100000', 'http://127.0.0.1:9527/cgi-bin/a/b/demo_cgi', {
     headers: {
-      'x-mockstar-query': encodeURIComponent('[{"_ms_name":"demo_cgi","_ms_target":"error_100000","_ms_disable":false}]'),
+      'x-mockstar-query': encodeURIComponent(JSON.stringify([{
+        '_ms_name': 'demo_cgi',
+        '_ms_target': 'error_100000',
+        '_ms_disable': false,
+      }])),
     },
   });
   bindDemoClick('#demo3 .btn.success_js_module', 'http://127.0.0.1:9527/cgi-bin/a/b/demo_cgi', {
     headers: {
-      'x-mockstar-query': encodeURIComponent('[{"_ms_name":"demo_cgi","_ms_target":"success_js_module","_ms_disable":false}]'),
+      'x-mockstar-query': encodeURIComponent(JSON.stringify([{
+        '_ms_name': 'demo_cgi',
+        '_ms_target': 'success_js_module',
+        '_ms_disable': false,
+      }])),
     },
   });
   bindDemoClick('#demo3 .btn.success_json_file', 'http://127.0.0.1:9527/cgi-bin/a/b/demo_cgi', {
     headers: {
-      'x-mockstar-query': encodeURIComponent('[{"_ms_name":"demo_cgi","_ms_target":"success_json_file","_ms_disable":false}]'),
+      'x-mockstar-query': encodeURIComponent(JSON.stringify([{
+        '_ms_name': 'demo_cgi',
+        '_ms_target': 'success_json_file',
+        '_ms_disable': false,
+      }])),
     },
   });
 }
