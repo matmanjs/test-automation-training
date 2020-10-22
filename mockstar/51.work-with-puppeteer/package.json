@@ -1,0 +1,10 @@
+{
+  "name": "51.work-with-puppeteer",
+  "private": true,
+  "scripts": {
+    "test": "mocha baidu.test.js"
+  },
+  "dependencies": {
+    "puppeteer": "^4.0.1"
+  }
+}
